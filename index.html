@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fantasy Massage</title>
+    <meta
+      name="description"
+      content="Fantasy Massage menyediakan layanan spa, pijat relaksasi, refleksi, dan aromaterapi di Jakarta untuk membantu tubuh terasa ringan, pikiran lebih tenang, dan energi kembali segar."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --font-serif: "Playfair Display", Georgia, serif;
+        --font-sans: "Inter", Arial, sans-serif;
+      }
+
+      #page-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        display: grid;
+        place-items: center;
+        background: #f7f7f4;
+        transition: opacity 0.7s ease;
+      }
+
+      .loader-panel {
+        width: min(420px, 82vw);
+        text-align: center;
+      }
+
+      .loader-brand {
+        margin: 0;
+        font-family: var(--font-serif);
+        font-size: clamp(2.25rem, 8vw, 3rem);
+        letter-spacing: 0;
+        color: #111111;
+      }
+
+      .loader-subtitle {
+        margin: 8px 0 0;
+        font-family: var(--font-sans);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: #666666;
+      }
+
+      .loader-track {
+        height: 1px;
+        margin-top: 32px;
+        overflow: hidden;
+        background: #d8d8d8;
+      }
+
+      .loader-line {
+        display: block;
+        width: 50%;
+        height: 100%;
+        background: #111111;
+      }
+    </style>
+  </head>
+  <body class="bg-[#f7f7f4] text-[#111111] [font-family:var(--font-sans)]">
+    <div id="page-loader">
+      <div class="loader-panel">
+        <p class="loader-brand">FANTASY</p>
+        <p class="loader-subtitle">massage in jakarta</p>
+        <div class="loader-track">
+          <span class="loader-line block h-full w-1/2 bg-[#111111]"></span>
+        </div>
+      </div>
+    </div>
+
+    <header class="fixed left-0 right-0 top-0 z-40 border-b border-[#e5e5e5]/80 bg-[#f7f7f4]/90 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-10">
+        <a href="#home" class="flex items-center gap-3">
+          <img class="h-12 w-12 rounded-full object-cover" src="./assets/ganbar/logo fantasy massage1.png" alt="Logo Fantasy Massage" />
+          <span class="[font-family:var(--font-serif)] text-2xl tracking-wide">FANTASY<span class="block text-xs italic tracking-normal text-[#666666]">massage in jakarta</span></span>
+        </a>
+        <div class="hidden items-center gap-8 text-xs font-bold uppercase tracking-[0.18em] text-[#333333] md:flex">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#benefit" class="nav-link">Benefit</a>
+          <a href="#packages" class="nav-link">Packages</a>
+          <a href="#testimoni" class="nav-link">Testimoni</a>
+        </div>
+        <a href="https://wa.me/6281234567890" class="inline-flex bg-[#111111] px-4 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:bg-[#333333] md:px-5">Booking</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="relative overflow-hidden px-5 pb-20 pt-32 lg:px-10 lg:pb-28 lg:pt-36">
+        <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
+          <div class="hero-copy">
+            <h1 class="[font-family:var(--font-serif)] text-[clamp(3.1rem,8vw,7.2rem)] leading-[0.9] tracking-normal text-[#111111]">
+              Ritual
+              <span class="block italic text-[#444444]">Spa&Massage</span>
+              Profesional.
+            </h1>
+            <p class="mt-7 max-w-lg text-base leading-8 text-[#666666]">
+              Nikmati layanan spa dan massage panggilan di Jakarta, mulai dari pijat relaksasi, refleksi, aromaterapi, lulur, hingga kerik yang membantu tubuh terasa ringan, pikiran lebih tenang, dan energi kembali segar.
+            </p>
+            <div class="mt-9 flex flex-wrap gap-4">
+              <a href="https://wa.me/6281234567890" class="inline-flex min-h-12 items-center justify-center bg-[#111111] px-6 text-xs font-extrabold uppercase tracking-[0.16em] text-white transition hover:-translate-y-0.5 hover:bg-[#333333]">Ambil Promo</a>
+              <a href="#packages" class="inline-flex min-h-12 items-center justify-center border border-[#d8d8d8] bg-white/40 px-6 text-xs font-extrabold uppercase tracking-[0.16em] text-[#111111] transition hover:-translate-y-0.5">Lihat Paket</a>
+            </div>
+            <div class="mt-12 flex gap-12 border-t border-[#dddddd] pt-8">
+              <div>
+                <p class="[font-family:var(--font-serif)] text-3xl">500+</p>
+                <p class="text-xs font-bold uppercase tracking-[0.16em] text-[#666666]">Klien Puas</p>
+              </div>
+              <div>
+                <p class="text-xl text-[#111111]">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                <p class="text-xs font-bold uppercase tracking-[0.16em] text-[#666666]">Nilai 4.9</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-art relative min-h-[460px] lg:min-h-[610px]">
+            <div class="absolute right-0 top-4 h-[78%] w-[72%] overflow-hidden rounded-t-full border-[10px] border-white bg-[#e8e8e8] shadow-2xl">
+              <img class="h-full w-full object-cover" src="./assets/ganbar/banner fantasy massage1.png" alt="Layanan pijat dan spa Fantasy Massage di Jakarta" />
+            </div>
+            <div class="floating-card absolute left-3 top-16 w-[48%] overflow-hidden rounded-xl border-[7px] border-white bg-white shadow-xl">
+              <img class="h-60 w-full object-cover" src="./assets/ganbar/image fantasy massage-terapis massage.png" alt="Terapis Fantasy Massage memberikan perawatan" />
+            </div>
+            <div class="floating-card absolute bottom-10 left-16 rounded-lg bg-white px-5 py-4 shadow-xl">
+              <p class="[font-family:var(--font-serif)] text-xl italic text-[#111111]">Refleksi</p>
+              <p class="text-xs uppercase tracking-[0.18em] text-[#666666]">Tubuh + pikiran</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="marquee-band overflow-hidden bg-white py-5 text-center text-xs font-bold uppercase tracking-[0.22em] text-[#555555]">
+        <div class="marquee-track whitespace-nowrap">
+          Dipercaya 5.000+ Orang &nbsp; | &nbsp; terapis profesional &nbsp; | &nbsp; Perawatan tubuh natural &nbsp; | &nbsp; Spesialis refleksi | &nbsp; Pelayan profesional
+        </div>
+      </section>
+
+      <section class="relative overflow-hidden bg-[#111111] px-5 py-24 text-white lg:px-10">
+        <div class="mx-auto max-w-6xl text-center">
+          <p class="mb-3.5 text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#cccccc]">Tentang Kami</p>
+          <h2 class="mx-auto max-w-3xl [font-family:var(--font-serif)] text-[clamp(2.3rem,5vw,5rem)] leading-tight">
+            Pengalaman spa yang <span class="italic text-[#d9d9d9]">menenangkan dan merawat</span> tubuh dan pikiran di kota jakarta
+          </h2>
+          <div class="mt-14 grid gap-5 md:grid-cols-4">
+            <img class="dark-photo h-[220px] w-full rounded-[10px] object-cover shadow-[0_20px_50px_rgba(0,0,0,0.28)] md:h-[260px] md:rotate-[-4deg]" src="./assets/ganbar/image fantasy massage 4-3.png" alt="Ruang perawatan Fantasy Massage" />
+            <img class="dark-photo h-[220px] w-full rounded-[10px] object-cover shadow-[0_20px_50px_rgba(0,0,0,0.28)] md:translate-y-10 md:h-[260px] md:rotate-[3deg]" src="./assets/ganbar/image fantasy massage-body-massage.png" alt="Perawatan body massage di Jakarta" />
+            <img class="dark-photo h-[220px] w-full rounded-[10px] object-cover shadow-[0_20px_50px_rgba(0,0,0,0.28)] md:h-[260px] md:rotate-[-2deg]" src="./assets/ganbar/image fantasy massage-refleksi.png" alt="Layanan refleksi kaki Fantasy Massage" />
+            <img class="dark-photo h-[220px] w-full rounded-[10px] object-cover shadow-[0_20px_50px_rgba(0,0,0,0.28)] md:translate-y-8 md:h-[260px] md:rotate-[4deg]" src="./assets/ganbar/image fantasy massage-lulur.png" alt="Perawatan lulur tubuh Fantasy Massage" />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="px-5 py-24 lg:px-10">
+        <div class="mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[0.95fr_1.05fr]">
+          <div class="about-image overflow-hidden rounded-t-full rounded-br-[7rem] bg-[#e8e8e8]">
+            <img class="h-full min-h-[520px] w-full object-cover" src="./assets/ganbar/image fantasy massage-terapis massage.png" alt="Terapis profesional Fantasy Massage di Jakarta" />
+          </div>
+          <div class="reveal">
+            <p class="mb-3.5 text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#111111]">Selamat datang di Fantasy Massage in Jakarta</p>
+            <h2 class="[font-family:var(--font-serif)] text-[clamp(2.3rem,5vw,4.8rem)] leading-none">Bangkitkan <span class="block italic text-[#444444]">Rasa Tenang Alami.</span></h2>
+            <p class="mt-7 text-base leading-8 text-[#666666]">
+              Fantasy Massage menghadirkan pengalaman massage modern dengan sentuhan natural. Melalui tenaga terapis yang berpengalaman dan profesional kami berusaha memberikan pelayanan yang terbaik dalam melayani customer. Kepuasan customer adalah kepuasan Kami.
+            </p>
+            <div class="mt-9 space-y-6 border-l border-[#d8d8d8] pl-6">
+              <div>
+                <h3 class="[font-family:var(--font-serif)] text-2xl">Area Perawatan Umum</h3>
+                <p class="mt-2 text-sm leading-7 text-[#666666]">Punggung, bahu, leher, kaki, telapak kaki, tangan, kepala, dan area tubuh yang terasa tegang.</p>
+              </div>
+              <div>
+                <h3 class="[font-family:var(--font-serif)] text-2xl">Layanan Pijat Panggilan</h3>
+                <p class="mt-2 text-sm leading-7 text-[#666666]">Terapis datang ke lokasi Anda di Jakarta, membawa perlengkapan perawatan, dan membantu Anda menikmati sesi pijat yang nyaman tanpa perlu keluar rumah.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="benefit" class="bg-[#111111] px-5 py-24 text-white lg:px-10">
+        <div class="mx-auto max-w-6xl">
+          <div class="reveal max-w-4xl text-center md:mx-auto">
+            <h2 class="[font-family:var(--font-serif)] text-[clamp(2.2rem,4vw,4.6rem)] leading-tight">Manfaat  Spa&Massage</span></h2>
+          </div>
+          <div class="mt-16 grid gap-x-10 gap-y-0 border-t border-white/10 md:grid-cols-2">
+            <article class="grid gap-3 border-b border-white/10 py-[34px] md:col-span-2 md:mx-auto md:max-w-2xl md:grid-cols-[64px_1fr] md:gap-6">
+              <span class="[font-family:var(--font-serif)] text-[32px] text-white/60">01.</span>
+              <div>
+                <h3 class="[font-family:var(--font-serif)] text-[clamp(1.45rem,2vw,2rem)] text-white">Membantu Munculnya Rasa Diperhatikan, Nyaman, dan Terhubung</h3>
+                <p class="mt-3 max-w-[620px] leading-[1.8] text-[#c9c9c9]">Sentuhan terapis yang tenang membantu tubuh merasa lebih aman, rileks, dan kembali nyaman setelah hari yang padat.</p>
+              </div>
+            </article>
+            <article class="grid gap-3 border-b border-white/10 py-[34px] md:grid-cols-[64px_1fr] md:gap-6">
+              <span class="[font-family:var(--font-serif)] text-[32px] text-white/60">02.</span>
+              <div>
+                <h3 class="[font-family:var(--font-serif)] text-[clamp(1.45rem,2vw,2rem)] text-white">Mengimbangi Efek Terlalu Lama Duduk</h3>
+                <p class="mt-3 max-w-[620px] leading-[1.8] text-[#c9c9c9]">Pijatan membantu area punggung, pinggang, bahu, dan kaki terasa lebih lega setelah banyak duduk saat bekerja atau berkendara.</p>
+              </div>
+            </article>
+            <article class="grid gap-3 border-b border-white/10 py-[34px] md:grid-cols-[64px_1fr] md:gap-6">
+              <span class="[font-family:var(--font-serif)] text-[32px] text-white/60">03.</span>
+              <div>
+                <h3 class="[font-family:var(--font-serif)] text-[clamp(1.45rem,2vw,2rem)] text-white">Perawatan Efektif untuk Mengurangi Stres</h3>
+                <p class="mt-3 max-w-[620px] leading-[1.8] text-[#c9c9c9]">Ritme pijatan yang stabil, ruangan yang tenang, dan aromaterapi membantu pikiran terasa lebih ringan dan relaks.</p>
+              </div>
+            </article>
+            <article class="grid gap-3 border-b border-white/10 py-[34px] md:grid-cols-[64px_1fr] md:gap-6">
+              <span class="[font-family:var(--font-serif)] text-[32px] text-white/60">04.</span>
+              <div>
+                <h3 class="[font-family:var(--font-serif)] text-[clamp(1.45rem,2vw,2rem)] text-white">Mengurangi Nyeri dan Ketegangan Otot</h3>
+                <p class="mt-3 max-w-[620px] leading-[1.8] text-[#c9c9c9]">Tekanan pijat yang tepat membantu meredakan rasa pegal, otot kaku, dan ketegangan pada area tubuh yang sering menumpuk beban.</p>
+              </div>
+            </article>
+            <article class="grid gap-3 border-b border-white/10 py-[34px] md:grid-cols-[64px_1fr] md:gap-6">
+              <span class="[font-family:var(--font-serif)] text-[32px] text-white/60">05.</span>
+              <div>
+                <h3 class="[font-family:var(--font-serif)] text-[clamp(1.45rem,2vw,2rem)] text-white">Membantu Tubuh Pulih dan Meningkatkan Kualitas Tidur</h3>
+                <p class="mt-3 max-w-[620px] leading-[1.8] text-[#c9c9c9]">Setelah tubuh lebih rileks dan tidak terlalu tegang, istirahat terasa lebih nyaman sehingga tidur bisa menjadi lebih nyenyak.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="packages" class="px-5 py-24 lg:px-10">
+        <div class="mx-auto max-w-6xl text-center">
+          <p class="mb-3.5 text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#111111]">Paket spa&Massage</p>
+          <h2 class="[font-family:var(--font-serif)] text-[clamp(2.2rem,4vw,4.6rem)] leading-tight">Pilih sesi terbaik untuk <span class="italic text-[#444444]">tubuh yang lebih ringan.</span></h2>
+          <div class="mt-14 grid gap-5 sm:grid-cols-2">
+            <article class="package-card group overflow-hidden rounded-xl border border-[#e5e5e5] bg-white text-left shadow-[0_18px_55px_rgba(0,0,0,0.06)] transition hover:-translate-y-1 hover:shadow-[0_22px_70px_rgba(0,0,0,0.1)]">
+              <img class="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105" src="./assets/ganbar/image fantasy massage-body-massage.png" alt="Paket Full Body Massage Fantasy Massage" />
+              <div class="p-6 md:p-8">
+                <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-[#666666]">Body Treatment</p>
+                <h3 class="mt-2 [font-family:var(--font-serif)] text-3xl leading-[1.05] text-[#111111]">Full Body Massage</h3>
+                <p class="mt-4 text-sm leading-7 text-[#666666]">Memberikan rasa nyaman, membantu mengendurkan otot-otot tubuh yang tegang, dan membantu memiliki kualitas tidur yang lebih baik.</p>
+                <a href="https://wa.me/6281234567890?text=Halo%20Fantasy%20Massage%2C%20saya%20ingin%20ambil%20promo%20Full%20Body%20Massage" class="mt-6 inline-flex min-h-12 items-center gap-3 bg-[#111111] px-5 text-left text-white transition hover:-translate-y-0.5 hover:bg-[#333333]">
+                  <svg class="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M20.5 13.6 13.6 20.5a2 2 0 0 1-2.83 0L3 12.73V3h9.73l7.77 7.77a2 2 0 0 1 0 2.83Z" stroke="currentColor" stroke-width="1.8" />
+                    <path d="M7.5 7.5h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
+                  </svg>
+                  <span class="text-sm font-extrabold uppercase tracking-[0.16em]">20% Ambil Promo</span>
+                </a>
+              </div>
+            </article>
+            <article class="package-card group overflow-hidden rounded-xl border border-[#e5e5e5] bg-white text-left shadow-[0_18px_55px_rgba(0,0,0,0.06)] transition hover:-translate-y-1 hover:shadow-[0_22px_70px_rgba(0,0,0,0.1)]">
+              <img class="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105" src="./assets/ganbar/image fantasy massage-lulur.png" alt="Paket Lulur dan Full Body Massage Fantasy Massage" />
+              <div class="p-6 md:p-8">
+                <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-[#666666]">Spa Treatment</p>
+                <h3 class="mt-2 [font-family:var(--font-serif)] text-3xl leading-[1.05] text-[#111111]">Lulur & Full Body Massage</h3>
+                <p class="mt-4 text-sm leading-7 text-[#666666]">Pijat lulur adalah jenis perawatan pijat spa yang menggunakan lulur berkualitas baik untuk membantu tubuh terasa lebih bersih dan segar.</p>
+                <a href="https://wa.me/6281234567890?text=Halo%20Fantasy%20Massage%2C%20saya%20ingin%20ambil%20promo%20Lulur%20%26%20Full%20Body%20Massage" class="mt-6 inline-flex min-h-12 items-center gap-3 bg-[#111111] px-5 text-left text-white transition hover:-translate-y-0.5 hover:bg-[#333333]">
+                  <svg class="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M20.5 13.6 13.6 20.5a2 2 0 0 1-2.83 0L3 12.73V3h9.73l7.77 7.77a2 2 0 0 1 0 2.83Z" stroke="currentColor" stroke-width="1.8" />
+                    <path d="M7.5 7.5h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
+                  </svg>
+                  <span class="text-sm font-extrabold uppercase tracking-[0.16em]">20% Ambil Promo</span>
+                </a>
+              </div>
+            </article>
+            <article class="package-card group overflow-hidden rounded-xl border border-[#e5e5e5] bg-white text-left shadow-[0_18px_55px_rgba(0,0,0,0.06)] transition hover:-translate-y-1 hover:shadow-[0_22px_70px_rgba(0,0,0,0.1)]">
+              <img class="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105" src="./assets/ganbar/image fantasy massage-kerokan.png" alt="Paket Pijat dan Kerik Fantasy Massage" />
+              <div class="p-6 md:p-8">
+                <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-[#666666]">Recovery Treatment</p>
+                <h3 class="mt-2 [font-family:var(--font-serif)] text-3xl leading-[1.05] text-[#111111]">Pijat & Kerik</h3>
+                <p class="mt-4 text-sm leading-7 text-[#666666]">Body massage dan kerik membantu membuat tubuh lebih rileks serta meredakan rasa tidak nyaman karena masuk angin.</p>
+                <a href="https://wa.me/6281234567890?text=Halo%20Fantasy%20Massage%2C%20saya%20ingin%20ambil%20promo%20Pijat%20%26%20Kerik" class="mt-6 inline-flex min-h-12 items-center gap-3 bg-[#111111] px-5 text-left text-white transition hover:-translate-y-0.5 hover:bg-[#333333]">
+                  <svg class="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M20.5 13.6 13.6 20.5a2 2 0 0 1-2.83 0L3 12.73V3h9.73l7.77 7.77a2 2 0 0 1 0 2.83Z" stroke="currentColor" stroke-width="1.8" />
+                    <path d="M7.5 7.5h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
+                  </svg>
+                  <span class="text-sm font-extrabold uppercase tracking-[0.16em]">20% Ambil Promo</span>
+                </a>
+              </div>
+            </article>
+            <article class="package-card group overflow-hidden rounded-xl border border-[#e5e5e5] bg-white text-left shadow-[0_18px_55px_rgba(0,0,0,0.06)] transition hover:-translate-y-1 hover:shadow-[0_22px_70px_rgba(0,0,0,0.1)]">
+              <img class="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105" src="./assets/ganbar/image fantasy massage 4-3.png" alt="Paket Masculine Spa Fantasy Massage untuk pelanggan pria di Jakarta" />
+              <div class="p-6 md:p-8">
+                <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-[#666666]">Men's Treatment</p>
+                <h3 class="mt-2 [font-family:var(--font-serif)] text-3xl leading-[1.05] text-[#111111]">Masculine Spa</h3>
+                <p class="mt-4 text-sm leading-7 text-[#666666]">Layanan body massage dan totok wajah membantu tubuh lebih rileks serta membuat wajah terasa lebih segar dan cerah.</p>
+                <a href="https://wa.me/6281234567890?text=Halo%20Fantasy%20Massage%2C%20saya%20ingin%20ambil%20promo%20Masculine%20Spa" class="mt-6 inline-flex min-h-12 items-center gap-3 bg-[#111111] px-5 text-left text-white transition hover:-translate-y-0.5 hover:bg-[#333333]">
+                  <svg class="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M20.5 13.6 13.6 20.5a2 2 0 0 1-2.83 0L3 12.73V3h9.73l7.77 7.77a2 2 0 0 1 0 2.83Z" stroke="currentColor" stroke-width="1.8" />
+                    <path d="M7.5 7.5h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
+                  </svg>
+                  <span class="text-sm font-extrabold uppercase tracking-[0.16em]">20% Ambil Promo</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimoni" class="bg-[#eeeeee] px-5 py-24 lg:px-10">
+        <div class="mx-auto max-w-6xl text-center">
+          <p class="mb-3.5 text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#111111]">Cerita Klien</p>
+          <h2 class="[font-family:var(--font-serif)] text-[clamp(2.1rem,4vw,4.2rem)]">Testimoni<span class="italic text-[#444444]"> Pelanggan kami.</span></h2>
+          <div class="mt-12 grid gap-6 md:grid-cols-3">
+            <article class="testimonial-card min-h-[310px] rounded-lg bg-white p-8 text-left shadow-[0_16px_40px_rgba(51,41,31,0.06)]">
+              <div class="grid h-[42px] w-[42px] place-items-center rounded-full bg-[#111111] font-extrabold text-white">S</div>
+              <h3 class="mt-[18px] font-extrabold">Sarah R.</h3>
+              <p class="mt-3.5 tracking-[0.08em] text-[#111111]">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              <blockquote class="mt-[18px] leading-[1.85] text-[#555555]">"Punggung saya jauh lebih ringan. Ruangannya wangi, bersih, dan therapist-nya sangat paham titik tegang."</blockquote>
+            </article>
+            <article class="testimonial-card min-h-[310px] rounded-lg bg-white p-8 text-left shadow-[0_16px_40px_rgba(51,41,31,0.06)]">
+              <div class="grid h-[42px] w-[42px] place-items-center rounded-full bg-[#111111] font-extrabold text-white">K</div>
+              <h3 class="mt-[18px] font-extrabold">Yanto</h3>
+              <p class="mt-3.5 tracking-[0.08em] text-[#111111]">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              <blockquote class="mt-[18px] leading-[1.85] text-[#555555]">"Pijat aromaterapinya lembut tapi efeknya terasa. Cocok untuk mengisi energi setelah kerja."</blockquote>
+            </article>
+            <article class="testimonial-card min-h-[310px] rounded-lg bg-white p-8 text-left shadow-[0_16px_40px_rgba(51,41,31,0.06)]">
+              <div class="grid h-[42px] w-[42px] place-items-center rounded-full bg-[#111111] font-extrabold text-white">A</div>
+              <h3 class="mt-[18px] font-extrabold">Alicia P.</h3>
+              <p class="mt-3.5 tracking-[0.08em] text-[#111111]">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              <blockquote class="mt-[18px] leading-[1.85] text-[#555555]">"Reservasi cepat lewat WhatsApp, staf ramah, dan suasananya premium tanpa terasa kaku."</blockquote>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#111111] px-5 py-16 text-[#dddddd] lg:px-10">
+      <div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-4">
+        <div>
+          <div class="flex items-center gap-3">
+            <img class="h-14 w-14 rounded-full object-cover" src="./assets/ganbar/logo fantasy massage1.png" alt="Logo Fantasy Massage" />
+            <h2 class="[font-family:var(--font-serif)] text-3xl text-white">FANTASY</h2>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-[#bbbbbb]">Spa dan refleksi premium untuk tubuh yang lebih ringan, tenang, dan terawat.</p>
+        </div>
+        <div>
+          <h3 class="mb-[18px] font-extrabold text-white">Perawatan</h3>
+          <a href="#packages" class="mt-3 block text-[#bbbbbb] transition hover:text-white">Full Body Massage</a>
+          <a href="#packages" class="mt-3 block text-[#bbbbbb] transition hover:text-white">Lulur & Full Body Massage</a>
+          <a href="#packages" class="mt-3 block text-[#bbbbbb] transition hover:text-white">Pijat & Kerik</a>
+          <a href="#packages" class="mt-3 block text-[#bbbbbb] transition hover:text-white">Masculine Spa</a>
+        </div>
+        <div>
+          <h3 class="mb-[18px] font-extrabold text-white">Tautan</h3>
+          <a href="#about" class="mt-3 block text-[#bbbbbb] transition hover:text-white">Tentang Kami</a>
+          <a href="#benefit" class="mt-3 block text-[#bbbbbb] transition hover:text-white">Manfaat</a>
+          <a href="#testimoni" class="mt-3 block text-[#bbbbbb] transition hover:text-white">Testimoni</a>
+        </div>
+        <div>
+          <h3 class="mb-[18px] font-extrabold text-white">Kontak</h3>
+          <p>Jl. Serenity No. 8, Jakarta</p>
+          <p>0812-3456-7890</p>
+          <p>hello@fantasymassage.id</p>
+        </div>
+      </div>
+      <div class="mx-auto mt-12 max-w-6xl border-t border-white/10 pt-6 text-xs text-[#999999]">&copy; 2026 Fantasy Massage. Seluruh hak cipta dilindungi.</div>
+    </footer>
+
+    <a class="fixed bottom-[22px] right-[22px] z-50 grid h-[62px] w-[62px] place-items-center rounded-full bg-[#111111] shadow-[0_18px_45px_rgba(0,0,0,0.22)] transition hover:-translate-y-1 hover:scale-105 hover:shadow-[0_24px_58px_rgba(0,0,0,0.3)]" href="https://wa.me/6281234567890" aria-label="Chat WhatsApp">
+      <svg class="h-[34px] w-[34px] fill-white" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16.02 3.2A12.68 12.68 0 0 0 5.08 22.3L3.2 29l6.86-1.8A12.68 12.68 0 1 0 16.02 3.2Zm0 23.14c-2.03 0-3.92-.59-5.53-1.6l-.4-.24-4.07 1.07 1.09-3.97-.26-.41a10.43 10.43 0 1 1 9.17 5.15Zm5.72-7.8c-.31-.16-1.86-.92-2.15-1.02-.29-.11-.5-.16-.71.16-.21.31-.82 1.02-1.01 1.23-.19.21-.37.24-.69.08-.31-.16-1.33-.49-2.54-1.57-.94-.84-1.57-1.87-1.75-2.19-.18-.31-.02-.48.14-.64.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.11-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.62-.52-.53-.71-.54h-.61c-.21 0-.55.08-.84.39-.29.31-1.1 1.08-1.1 2.62s1.13 3.04 1.29 3.25c.16.21 2.23 3.4 5.4 4.76.75.32 1.34.52 1.8.67.76.24 1.45.21 1.99.13.61-.09 1.86-.76 2.12-1.49.26-.73.26-1.36.18-1.49-.08-.13-.29-.21-.6-.37Z" />
+      </svg>
+    </a>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", Arial, sans-serif;
+  --accent: #111111;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  content: "";
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
