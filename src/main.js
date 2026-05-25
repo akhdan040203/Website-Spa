@@ -1,35 +1,67 @@
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./styles.css";
-
-gsap.registerPlugin(ScrollTrigger);
+import AOS from "aos";
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const mobileViewport = window.matchMedia("(max-width: 767px)");
+
+const saveAosState = (element) => {
+  if (!element.dataset.desktopAos) {
+    element.dataset.desktopAos = element.dataset.aos || "none";
+  }
+
+  if (!element.dataset.desktopAosDelay) {
+    element.dataset.desktopAosDelay = element.dataset.aosDelay || "0";
+  }
+};
+
+const restoreDesktopAos = (element) => {
+  if (!element.dataset.desktopAos) return;
+
+  if (element.dataset.desktopAos === "none") {
+    delete element.dataset.aos;
+  } else {
+    element.dataset.aos = element.dataset.desktopAos;
+  }
+
+  if (element.dataset.desktopAosDelay === "0") {
+    delete element.dataset.aosDelay;
+  } else {
+    element.dataset.aosDelay = element.dataset.desktopAosDelay;
+  }
+};
+
+const normalizeAosDelays = () => {
+  document.querySelectorAll("[data-aos-delay]").forEach((element) => {
+    saveAosState(element);
+
+    const desktopDelay = Number(element.dataset.desktopAosDelay) || 0;
+
+    element.dataset.aosDelay = mobileViewport.matches ? "0" : String(desktopDelay);
+  });
+};
 
 const hidePageLoader = () => {
   const loader = document.querySelector("#page-loader");
 
   if (!loader) return;
 
-  const removeLoader = () => loader.remove();
+  const removeLoader = () => {
+    loader.remove();
+    AOS.refreshHard();
+  };
 
   if (prefersReducedMotion) {
     removeLoader();
     return;
   }
 
-  gsap.to(loader, {
-    opacity: 0,
-    duration: 0.75,
-    ease: "power2.out",
-    onComplete: removeLoader,
-  });
+  loader.classList.add("is-hiding");
+  window.requestAnimationFrame(removeLoader);
 };
 
 const initMobileMenu = () => {
   const button = document.querySelector("#menu-toggle");
   const menu = document.querySelector("#mobile-menu");
-  const links = gsap.utils.toArray(".mobile-menu-link");
+  const links = Array.from(document.querySelectorAll(".mobile-menu-link"));
 
   if (!button || !menu) return () => {};
 
@@ -54,178 +86,120 @@ const initMobileMenu = () => {
   };
 };
 
-const createScrollReveal = (target, vars = {}) => {
-  const elements = gsap.utils.toArray(target);
+const initHeroParallax = () => {
+  const hero = document.querySelector("#home");
+  const heroBg = document.querySelector(".hero-bg");
 
-  elements.forEach((element) => {
-    gsap.from(element, {
-      scrollTrigger: {
-        trigger: element,
-        start: "top 84%",
-        once: true,
-      },
-      y: vars.y ?? 42,
-      rotate: vars.rotate ?? 0,
-      opacity: 0,
-      duration: vars.duration ?? 0.85,
-      ease: "power3.out",
-    });
-  });
-};
+  if (!hero || !heroBg || prefersReducedMotion) return () => {};
 
-const initPackageTilt = (cards) => {
-  const cleanupHandlers = [];
+  let animationFrame = 0;
 
-  cards.forEach((card) => {
-    const rotateX = gsap.quickTo(card, "rotateX", { duration: 0.28, ease: "power2.out" });
-    const rotateY = gsap.quickTo(card, "rotateY", { duration: 0.28, ease: "power2.out" });
+  const updateParallax = () => {
+    animationFrame = 0;
 
-    let bounds = null;
-    let pointer = null;
-    let animationFrame = 0;
+    const rect = hero.getBoundingClientRect();
+    const progress = Math.min(Math.max(-rect.top / rect.height, 0), 1);
+    const translate = -8 + progress * 24;
+    const scale = 1.06 + progress * 0.06;
 
-    const updateTilt = () => {
-      animationFrame = 0;
+    heroBg.style.transform = `translate3d(0, ${translate}%, 0) scale(${scale})`;
+  };
 
-      if (!bounds || !pointer) return;
+  const requestUpdate = () => {
+    if (!animationFrame) {
+      animationFrame = window.requestAnimationFrame(updateParallax);
+    }
+  };
 
-      const x = pointer.clientX - bounds.left - bounds.width / 2;
-      const y = pointer.clientY - bounds.top - bounds.height / 2;
-
-      rotateY(x / 28);
-      rotateX(-y / 28);
-    };
-
-    const requestTiltUpdate = (event) => {
-      pointer = event;
-
-      if (!animationFrame) {
-        animationFrame = window.requestAnimationFrame(updateTilt);
-      }
-    };
-
-    const handlePointerEnter = () => {
-      bounds = card.getBoundingClientRect();
-      gsap.set(card, { transformPerspective: 900 });
-    };
-
-    const handlePointerLeave = () => {
-      pointer = null;
-      bounds = null;
-
-      if (animationFrame) {
-        window.cancelAnimationFrame(animationFrame);
-        animationFrame = 0;
-      }
-
-      rotateX(0);
-      rotateY(0);
-    };
-
-    card.addEventListener("pointerenter", handlePointerEnter);
-    card.addEventListener("pointermove", requestTiltUpdate);
-    card.addEventListener("pointerleave", handlePointerLeave);
-
-    cleanupHandlers.push(() => {
-      card.removeEventListener("pointerenter", handlePointerEnter);
-      card.removeEventListener("pointermove", requestTiltUpdate);
-      card.removeEventListener("pointerleave", handlePointerLeave);
-
-      if (animationFrame) {
-        window.cancelAnimationFrame(animationFrame);
-      }
-    });
-  });
-
-  return () => cleanupHandlers.forEach((cleanup) => cleanup());
-};
-
-const initAnimations = () => {
-  const cleanupHandlers = [];
-
-  if (prefersReducedMotion) {
-    return () => {};
-  }
-
-  const context = gsap.context(() => {
-    gsap.fromTo(
-      ".loader-line",
-      { xPercent: -120 },
-      {
-        xPercent: 220,
-        duration: 1.15,
-        repeat: -1,
-        ease: "power2.inOut",
-      },
-    );
-
-    gsap.from(".hero-copy > *", {
-      y: 34,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.12,
-      ease: "power3.out",
-    });
-
-    gsap.from(".hero-art > *", {
-      y: 42,
-      opacity: 0,
-      duration: 1.1,
-      stagger: 0.16,
-      delay: 0.25,
-      ease: "power3.out",
-    });
-
-    gsap.to(".marquee-track", {
-      xPercent: -35,
-      duration: 18,
-      repeat: -1,
-      ease: "none",
-    });
-
-    createScrollReveal(".reveal, .testimonial-card, .benefit-item");
-    createScrollReveal(".package-card", { y: 34, duration: 0.75 });
-
-    gsap.utils.toArray(".dark-photo").forEach((photo, index) => {
-      createScrollReveal(photo, {
-        y: 54,
-        rotate: index % 2 === 0 ? -7 : 7,
-        duration: 1,
-      });
-    });
-
-    cleanupHandlers.push(initPackageTilt(gsap.utils.toArray(".package-card")));
-  }, document.body);
+  updateParallax();
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
 
   return () => {
-    cleanupHandlers.forEach((cleanup) => cleanup());
-    context.revert();
+    window.removeEventListener("scroll", requestUpdate);
+    window.removeEventListener("resize", requestUpdate);
+
+    if (animationFrame) {
+      window.cancelAnimationFrame(animationFrame);
+    }
   };
 };
 
-let cleanupAnimations = null;
+const refreshAosAfterHashJump = () => {
+  window.setTimeout(() => AOS.refreshHard(), 180);
+};
+
+const refreshAosAfterImagesLoad = () => {
+  document.querySelectorAll("img").forEach((image) => {
+    if (image.complete) return;
+
+    image.addEventListener("load", () => AOS.refreshHard(), { once: true });
+    image.addEventListener("error", () => AOS.refreshHard(), { once: true });
+  });
+};
+
+const initAos = () => {
+  document.querySelectorAll("[data-desktop-aos]").forEach(restoreDesktopAos);
+  normalizeAosDelays();
+
+  AOS.init({
+    duration: mobileViewport.matches ? 450 : 850,
+    easing: "ease-out",
+    offset: mobileViewport.matches ? 20 : 90,
+    delay: 0,
+    once: false,
+    mirror: true,
+    throttleDelay: 50,
+    anchorPlacement: "top-bottom",
+    disable: () => prefersReducedMotion,
+  });
+};
+
 let cleanupMobileMenu = null;
+let cleanupHeroParallax = null;
 
 document.addEventListener("DOMContentLoaded", () => {
   cleanupMobileMenu = initMobileMenu();
-  cleanupAnimations = initAnimations();
+  cleanupHeroParallax = initHeroParallax();
+  initAos();
+  refreshAosAfterImagesLoad();
+  refreshAosAfterHashJump();
 });
 
-window.addEventListener("load", hidePageLoader, { once: true });
+window.addEventListener(
+  "load",
+  () => {
+    hidePageLoader();
+    AOS.refreshHard();
+
+    if (window.location.hash) {
+      refreshAosAfterHashJump();
+    }
+  },
+  { once: true },
+);
+
 window.setTimeout(hidePageLoader, 1800);
+window.addEventListener("hashchange", refreshAosAfterHashJump);
+
+mobileViewport.addEventListener("change", () => {
+  document.querySelectorAll("[data-desktop-aos]").forEach(restoreDesktopAos);
+  normalizeAosDelays();
+  AOS.refreshHard();
+});
 
 window.addEventListener("pagehide", () => {
   cleanupMobileMenu?.();
   cleanupMobileMenu = null;
-  cleanupAnimations?.();
-  cleanupAnimations = null;
+  cleanupHeroParallax?.();
+  cleanupHeroParallax = null;
 });
 
 if (import.meta.hot) {
   import.meta.hot.dispose(() => {
     cleanupMobileMenu?.();
     cleanupMobileMenu = null;
-    cleanupAnimations?.();
-    cleanupAnimations = null;
+    cleanupHeroParallax?.();
+    cleanupHeroParallax = null;
   });
 }

@@ -1,13 +1,79 @@
 @import "tailwindcss";
+@import "aos/dist/aos.css";
 
 :root {
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Inter", Arial, sans-serif;
   --accent: #111111;
+  --gold: #caa24a;
+  --gold-light: #f0d27a;
+  --gold-dark: #8f6b20;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  background: #f7f7f4;
+  transition: opacity 0.7s ease;
+}
+
+#page-loader.is-hiding {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-panel {
+  width: min(420px, 82vw);
+  text-align: center;
+}
+
+.loader-brand {
+  margin: 0;
+  color: var(--gold-dark);
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 8vw, 3rem);
+  letter-spacing: 0;
+}
+
+.loader-subtitle {
+  margin: 8px 0 0;
+  color: #666666;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.loader-track {
+  height: 1px;
+  margin-top: 32px;
+  overflow: hidden;
+  background: #d8d8d8;
+}
+
+.loader-line {
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold));
+  animation: loader-slide 1.15s ease-in-out infinite;
+}
+
+.marquee-track {
+  display: inline-block;
+  animation: marquee-scroll 28s linear infinite;
 }
 
 .nav-link {
@@ -27,4 +93,92 @@ html {
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+.package-card img {
+  transition: transform 0.8s ease;
+}
+
+.package-card:hover img {
+  transform: scale(1.05);
+}
+
+.wa-float {
+  isolation: isolate;
+}
+
+.wa-signal {
+  position: absolute;
+  inset: -8px;
+  z-index: -1;
+  border: 1px solid rgba(240, 210, 122, 0.7);
+  border-radius: 999px;
+  box-shadow: 0 0 26px rgba(202, 162, 74, 0.38);
+  animation: wa-signal-pulse 2.35s ease-out infinite;
+}
+
+.wa-signal-two {
+  animation-delay: 0.72s;
+}
+
+.wa-signal-three {
+  animation-delay: 1.44s;
+}
+
+@keyframes wa-signal-pulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.72);
+  }
+
+  24% {
+    opacity: 0.78;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.72);
+  }
+}
+
+@keyframes loader-slide {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  50% {
+    transform: translateX(110%);
+  }
+
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader-line,
+  .marquee-track,
+  .wa-signal {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  [data-aos] {
+    transition-duration: 500ms !important;
+  }
+
+  [data-aos-delay] {
+    transition-delay: 0ms !important;
+  }
 }
