@@ -26,6 +26,34 @@ const hidePageLoader = () => {
   });
 };
 
+const initMobileMenu = () => {
+  const button = document.querySelector("#menu-toggle");
+  const menu = document.querySelector("#mobile-menu");
+  const links = gsap.utils.toArray(".mobile-menu-link");
+
+  if (!button || !menu) return () => {};
+
+  const setMenuState = (isOpen) => {
+    button.setAttribute("aria-expanded", String(isOpen));
+    menu.classList.toggle("hidden", !isOpen);
+  };
+
+  const toggleMenu = () => {
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+    setMenuState(!isOpen);
+  };
+
+  const closeMenu = () => setMenuState(false);
+
+  button.addEventListener("click", toggleMenu);
+  links.forEach((link) => link.addEventListener("click", closeMenu));
+
+  return () => {
+    button.removeEventListener("click", toggleMenu);
+    links.forEach((link) => link.removeEventListener("click", closeMenu));
+  };
+};
+
 const createScrollReveal = (target, vars = {}) => {
   const elements = gsap.utils.toArray(target);
 
@@ -176,8 +204,10 @@ const initAnimations = () => {
 };
 
 let cleanupAnimations = null;
+let cleanupMobileMenu = null;
 
 document.addEventListener("DOMContentLoaded", () => {
+  cleanupMobileMenu = initMobileMenu();
   cleanupAnimations = initAnimations();
 });
 
@@ -185,12 +215,16 @@ window.addEventListener("load", hidePageLoader, { once: true });
 window.setTimeout(hidePageLoader, 1800);
 
 window.addEventListener("pagehide", () => {
+  cleanupMobileMenu?.();
+  cleanupMobileMenu = null;
   cleanupAnimations?.();
   cleanupAnimations = null;
 });
 
 if (import.meta.hot) {
   import.meta.hot.dispose(() => {
+    cleanupMobileMenu?.();
+    cleanupMobileMenu = null;
     cleanupAnimations?.();
     cleanupAnimations = null;
   });

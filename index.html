@@ -91,8 +91,24 @@
           <a href="#packages" class="nav-link">Packages</a>
           <a href="#testimoni" class="nav-link">Testimoni</a>
         </div>
-        <a href="https://wa.me/6281234567890" class="inline-flex bg-[#111111] px-4 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:bg-[#333333] md:px-5">Booking</a>
+        <a href="https://wa.me/6281234567890" class="hidden bg-[#111111] px-4 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:bg-[#333333] md:inline-flex md:px-5">Booking</a>
+        <button id="menu-toggle" class="grid h-11 w-11 place-items-center border border-[#d8d8d8] text-[#111111] md:hidden" type="button" aria-label="Buka menu navigasi" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="space-y-1.5">
+            <span class="block h-0.5 w-5 bg-current"></span>
+            <span class="block h-0.5 w-5 bg-current"></span>
+            <span class="block h-0.5 w-5 bg-current"></span>
+          </span>
+        </button>
       </nav>
+      <div id="mobile-menu" class="hidden border-t border-[#e5e5e5] bg-[#f7f7f4] px-5 pb-5 pt-2 md:hidden">
+        <div class="mx-auto grid max-w-7xl gap-3 text-center text-sm font-bold uppercase tracking-[0.18em] text-[#333333]">
+          <a href="#about" class="mobile-menu-link border-b border-[#e5e5e5] py-3">About</a>
+          <a href="#benefit" class="mobile-menu-link border-b border-[#e5e5e5] py-3">Benefit</a>
+          <a href="#packages" class="mobile-menu-link border-b border-[#e5e5e5] py-3">Packages</a>
+          <a href="#testimoni" class="mobile-menu-link border-b border-[#e5e5e5] py-3">Testimoni</a>
+          <a href="https://wa.me/6281234567890" class="mobile-menu-link mt-2 inline-flex min-h-12 items-center justify-center bg-[#111111] px-5 text-xs font-extrabold uppercase tracking-[0.16em] text-white">Booking</a>
+        </div>
+      </div>
     </header>
 
     <main id="home">
