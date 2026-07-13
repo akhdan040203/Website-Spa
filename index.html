@@ -1,389 +1,271 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fantasy Massage</title>
-    <link rel="icon" type="image/png" href="./assets/ganbar/logo2.png" />
-    <link rel="apple-touch-icon" href="./assets/ganbar/logo2.png" />
-    <meta
-      name="description"
-        content="Fantasy Massage menyediakan layanan spa, massage relaksasi, refleksi, dan aromaterapi di Jakarta untuk membantu tubuh terasa ringan, pikiran lebih tenang, dan energi kembali segar."
-    />
+    <title>Ungu Spa | Massage Panggilan Profesional 24 Jam</title>
+    <meta name="description" content="Ungu Spa menyediakan massage dan spa panggilan profesional 24 jam. Nikmati treatment nyaman dari terapis berpengalaman langsung di tempat Anda." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Ungu Spa" />
+    <meta name="theme-color" content="#26003f" />
+    <meta name="color-scheme" content="light" />
+    <meta name="format-detection" content="telephone=yes" />
+    <link rel="canonical" href="https://unguspa.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:site_name" content="Ungu Spa" />
+    <meta property="og:title" content="Ungu Spa | Massage Panggilan Profesional 24 Jam" />
+    <meta property="og:description" content="Layanan massage dan spa panggilan profesional 24 jam dengan terapis berpengalaman, langsung di tempat Anda." />
+    <meta property="og:url" content="https://unguspa.com/" />
+    <meta property="og:image" content="https://unguspa.com/assets/ganbar/heroo.webp" />
+    <meta property="og:image:alt" content="Layanan massage dan spa panggilan profesional dari Ungu Spa" />
+    <meta property="og:image:type" content="image/webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ungu Spa | Massage Panggilan Profesional 24 Jam" />
+    <meta name="twitter:description" content="Layanan massage dan spa panggilan profesional 24 jam, langsung di tempat Anda." />
+    <meta name="twitter:image" content="https://unguspa.com/assets/ganbar/heroo.webp" />
+    <meta name="twitter:image:alt" content="Layanan massage dan spa panggilan profesional dari Ungu Spa" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="icon" type="image/png" href="./assets/ganbar/logo-ungu-spa-transparent.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://unguspa.com/#organization",
+            "name": "Ungu Spa",
+            "url": "https://unguspa.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://unguspa.com/assets/ganbar/logo-ungu-spa-transparent.png"
+            },
+            "telephone": "+62-819-4767-3316",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+62-819-4767-3316",
+              "contactType": "customer service",
+              "availableLanguage": "Indonesian"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://unguspa.com/#website",
+            "url": "https://unguspa.com/",
+            "name": "Ungu Spa",
+            "inLanguage": "id-ID",
+            "publisher": { "@id": "https://unguspa.com/#organization" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://unguspa.com/#webpage",
+            "url": "https://unguspa.com/",
+            "name": "Ungu Spa | Massage Panggilan Profesional 24 Jam",
+            "description": "Layanan massage dan spa panggilan profesional 24 jam dengan terapis berpengalaman, langsung di tempat Anda.",
+            "inLanguage": "id-ID",
+            "isPartOf": { "@id": "https://unguspa.com/#website" },
+            "about": { "@id": "https://unguspa.com/#organization" },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://unguspa.com/assets/ganbar/heroo.webp"
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://unguspa.com/#service",
+            "name": "Massage dan Spa Panggilan",
+            "serviceType": "Massage dan spa panggilan profesional",
+            "provider": { "@id": "https://unguspa.com/#organization" },
+            "areaServed": { "@type": "Country", "name": "Indonesia" },
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://unguspa.com/",
+              "servicePhone": {
+                "@type": "ContactPoint",
+                "telephone": "+62-819-4767-3316",
+                "contactType": "reservations"
+              }
+            }
+          }
+        ]
+      }
+    </script>
+
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+        if (!f._fbq) f._fbq = n;
+        n.push = n; n.loaded = !0; n.version = "2.0"; n.queue = [];
+        t = b.createElement(e); t.async = !0; t.src = v;
+        s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "1332034295519998");
+      fbq("track", "PageView");
+      fbq("track", "ViewContent", { content_name: "Ungu Spa", content_category: "Massage Panggilan" });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18197334083"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "AW-18197334083");
+    </script>
   </head>
-  <body class="overflow-x-hidden bg-[#f7f7f4] text-[#111111] [font-family:var(--font-sans)]">
-    <div id="page-loader">
+  <body class="bg-[#f7f2fb] font-sans text-slate-950 antialiased">
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1332034295519998&ev=PageView&noscript=1" alt="" /></noscript>
+
+    <div id="page-loader" aria-hidden="true">
+      <div class="loader-ornament loader-ornament-left"></div>
       <div class="loader-panel">
-        <p class="loader-brand">Fantasy massage</p>
-        <p class="loader-subtitle">in jakarta</p>
-        <div class="loader-track">
-          <span class="loader-line block h-full w-1/2 bg-[#111111]"></span>
-        </div>
+        <div class="loader-logo-wrap"><img src="./assets/ganbar/logo-ungu-spa-transparent.png" alt="Logo Ungu Spa" /></div>
+        <p class="loader-brand">Ungu Spa</p>
+        <p class="loader-tagline">Relaxation · Wellness · Care</p>
+        <span class="loader-progress"></span>
       </div>
+      <div class="loader-ornament loader-ornament-right"></div>
     </div>
 
-    <header class="fixed left-0 right-0 top-0 z-40 border-b border-[#e5e5e5]/80 bg-[#f7f7f4]/90 backdrop-blur-xl">
-      <nav class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:px-5 lg:px-10">
-        <a href="#home" class="flex min-w-0 items-center gap-2.5 sm:gap-3">
-          <img class="h-12 w-12 shrink-0 rounded-full object-cover sm:h-14 sm:w-14" src="./assets/ganbar/logo2.png" alt="Logo Fantasy Massage" />
-          <span class="min-w-0 truncate [font-family:var(--font-serif)] text-xl tracking-wide text-[#8f6b20] sm:text-2xl">Fantasy Massage<span class="block truncate text-[11px] italic tracking-normal text-[#666666] sm:text-xs">in jakarta</span></span>
+    <header class="site-header" data-site-header>
+      <nav class="relative flex h-16 w-full items-center justify-between border-b border-white/10 bg-white/10 px-5 shadow-2xl shadow-black/10 backdrop-blur-md lg:px-10">
+        <a class="flex min-w-0 items-center gap-3 text-white" href="#home" aria-label="Ungu Spa">
+          <span class="brand-logo"><img src="./assets/ganbar/logo-ungu-spa-transparent.png" alt="Logo Ungu Spa" /></span>
+          <span class="brand-name"><strong>Ungu</strong><small>Spa</small></span>
         </a>
-        <div class="hidden items-center gap-8 text-xs font-bold uppercase tracking-[0.18em] text-[#333333] md:flex">
-          <a href="#about" class="nav-link">About</a>
-          <a href="#benefit" class="nav-link">Benefit</a>
-          <a href="#packages" class="nav-link">Packages</a>
-          <a href="#testimoni" class="nav-link">Testimoni</a>
+        <button class="menu-toggle inline-flex size-10 items-center justify-center border border-white/25 bg-white/10 text-white md:hidden" type="button" data-menu-toggle aria-label="Buka menu" aria-expanded="false"><span></span></button>
+        <div class="site-menu absolute left-5 right-5 top-[4.5rem] hidden border border-white/15 bg-[#24003f] p-5 text-center shadow-xl md:static md:flex md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0 md:text-left md:shadow-none" data-menu>
+          <a href="#about">Tentang Kami</a><a href="#services">Paket Layanan</a><a href="#benefits">Manfaat</a><a href="#order">Cara Order</a><a href="#testimoni">Testimoni</a>
+          <a class="nav-cta" href="https://wa.me/6281947673316">Hubungi Kami</a>
         </div>
-        <a href="https://wa.me/6281947673316" class="hidden bg-gradient-to-r from-[#8f6b20] via-[#d8b654] to-[#f0d27a] px-4 py-3 text-xs font-bold uppercase tracking-[0.16em] text-[#111111] shadow-[0_12px_30px_rgba(202,162,74,0.28)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(202,162,74,0.38)] md:inline-flex md:px-5">Hubungi Kami</a>
-        <button id="menu-toggle" class="grid h-11 w-11 shrink-0 place-items-center border border-[#d8d8d8] text-[#111111] md:hidden" type="button" aria-label="Buka menu navigasi" aria-controls="mobile-menu" aria-expanded="false">
-          <span class="space-y-1.5">
-            <span class="block h-0.5 w-5 bg-current"></span>
-            <span class="block h-0.5 w-5 bg-current"></span>
-            <span class="block h-0.5 w-5 bg-current"></span>
-          </span>
-        </button>
       </nav>
-      <div id="mobile-menu" class="hidden border-t border-[#e5e5e5] bg-[#f7f7f4] px-5 pb-5 pt-2 md:hidden">
-        <div class="mx-auto grid max-w-7xl gap-3 text-center text-sm font-bold uppercase tracking-[0.18em] text-[#333333]">
-          <a href="#about" class="mobile-menu-link border-b border-[#e5e5e5] py-3">About</a>
-          <a href="#benefit" class="mobile-menu-link border-b border-[#e5e5e5] py-3">Benefit</a>
-          <a href="#packages" class="mobile-menu-link border-b border-[#e5e5e5] py-3">Packages</a>
-          <a href="#testimoni" class="mobile-menu-link border-b border-[#e5e5e5] py-3">Testimoni</a>
-          <a href="https://wa.me/6281947673316" class="mobile-menu-link mt-2 inline-flex min-h-12 items-center justify-center bg-gradient-to-r from-[#8f6b20] via-[#d8b654] to-[#f0d27a] px-5 text-xs font-extrabold uppercase tracking-[0.16em] text-[#111111]">Hubungi Kami</a>
-        </div>
-      </div>
     </header>
 
     <main id="home">
-      <section class="relative isolate min-h-screen w-full overflow-hidden px-4 pb-16 pt-28 text-white sm:px-5 sm:pb-20 sm:pt-32 lg:px-10 lg:pb-28 lg:pt-36">
-        <img class="hero-bg absolute inset-0 -z-30 h-[125%] w-full object-cover will-change-transform" src="./assets/ganbar/heroo-bg.png" alt="" aria-hidden="true" />
-        <div class="absolute inset-0 -z-20 bg-[#050505]/82"></div>
-        <div class="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-black/85 to-transparent"></div>
-        <div class="mx-auto flex min-h-[calc(100svh-7rem)] w-full max-w-7xl items-center justify-center sm:min-h-[calc(100vh-8rem)]">
-          <div class="hero-copy w-full min-w-0 max-w-5xl text-center" data-aos="fade-up" data-aos-duration="1000">
-            <h1 class="mx-auto max-w-[12ch] [font-family:var(--font-serif)] text-[clamp(2.55rem,13vw,4.35rem)] leading-[0.98] tracking-normal text-white sm:max-w-none sm:text-[clamp(3.8rem,7vw,6.4rem)] sm:leading-[0.95]">
-              <span class="block">Spa & <span class="text-[#f0d27a]">Massage</span></span>
-              <span class="block">Jakarta</span>
-              <span class="block text-white/90"><span class="text-[#d8b654]">Panggilan</span> 24 Jam</span>
-            </h1>
-            <p class="mx-auto mt-7 max-w-[32rem] text-base font-semibold leading-8 text-white/90 sm:mt-8 md:max-w-3xl md:text-2xl md:leading-10">
-              Layanan massage spa profesional 24/7 langsung ke rumah, hotel, dan apartemen Anda di Jakarta.
-            </p>
-            <p class="mx-auto mt-5 max-w-[31rem] text-sm leading-7 text-white/75 sm:text-base sm:leading-8 md:max-w-3xl md:text-lg">
-              Terapis berpengalaman siap datang ke lokasi Anda. Pesan sekarang dan nikmati relaksasi tanpa perlu keluar rumah.
-            </p>
-            <div class="mx-auto mt-9 grid w-full max-w-[22rem] grid-cols-1 justify-center gap-3 min-[380px]:grid-cols-2 sm:mt-10 sm:max-w-none sm:flex sm:flex-wrap sm:gap-4">
-              <a href="https://wa.me/6281947673316" class="inline-flex min-h-12 w-full items-center justify-center gap-2 bg-gradient-to-r from-[#8f6b20] via-[#d8b654] to-[#f0d27a] px-3 text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#111111] shadow-[0_18px_45px_rgba(202,162,74,0.34)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_55px_rgba(202,162,74,0.44)] sm:min-h-14 sm:w-auto sm:gap-3 sm:px-7 sm:text-xs sm:tracking-[0.16em]">
-                <svg class="h-4 w-4 fill-current sm:h-5 sm:w-5" viewBox="0 0 32 32" aria-hidden="true">
-                  <path d="M16.02 3.2A12.68 12.68 0 0 0 5.08 22.3L3.2 29l6.86-1.8A12.68 12.68 0 1 0 16.02 3.2Zm0 23.14c-2.03 0-3.92-.59-5.53-1.6l-.4-.24-4.07 1.07 1.09-3.97-.26-.41a10.43 10.43 0 1 1 9.17 5.15Zm5.72-7.8c-.31-.16-1.86-.92-2.15-1.02-.29-.11-.5-.16-.71.16-.21.31-.82 1.02-1.01 1.23-.19.21-.37.24-.69.08-.31-.16-1.33-.49-2.54-1.57-.94-.84-1.57-1.87-1.75-2.19-.18-.31-.02-.48.14-.64.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.11-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.62-.52-.53-.71-.54h-.61c-.21 0-.55.08-.84.39-.29.31-1.1 1.08-1.1 2.62s1.13 3.04 1.29 3.25c.16.21 2.23 3.4 5.4 4.76.75.32 1.34.52 1.8.67.76.24 1.45.21 1.99.13.61-.09 1.86-.76 2.12-1.49.26-.73.26-1.36.18-1.49-.08-.13-.29-.21-.6-.37Z" />
-                </svg>
-                <span>Pesan Sekarang</span>
-              </a>
-              <a href="#packages" class="inline-flex min-h-12 w-full items-center justify-center border border-[#d8b654]/60 bg-black/20 px-3 text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#f0d27a] backdrop-blur transition hover:-translate-y-0.5 hover:bg-[#d8b654]/10 sm:min-h-14 sm:w-auto sm:px-7 sm:text-xs sm:tracking-[0.16em]">Lihat Layanan</a>
+      <section class="hero-section relative min-h-screen overflow-hidden bg-[#170026] text-white">
+        <img class="hero-image" src="./assets/ganbar/heroo.webp" alt="" aria-hidden="true" />
+        <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(23,0,38,.9),rgba(23,0,38,.7)_48%,rgba(23,0,38,.46)_82%)]"></div>
+        <div class="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-[#170026]/85 to-transparent"></div>
+        <div class="relative z-10 mx-auto grid min-h-screen w-full max-w-7xl items-center px-5 py-28 lg:px-8">
+          <div class="max-w-4xl pt-10" data-aos="fade-up">
+            <p class="hero-kicker">Professional Home Massage</p>
+            <h1 class="mt-4 max-w-4xl text-[2.7rem] font-bold leading-[1.02] min-[390px]:text-5xl md:text-7xl lg:text-8xl">Sentuhan Relaksasi, Hadir di Tempat Anda</h1>
+            <p class="mt-6 max-w-2xl text-base leading-8 text-white/78 md:text-xl">Layanan massage dan perawatan tubuh profesional untuk membantu tubuh terasa lebih ringan, rileks, dan kembali segar.</p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a class="primary-btn" href="https://wa.me/6281947673316?text=Halo%20Ungu%20Spa%2C%20saya%20ingin%20booking">Pesan Sekarang</a>
+              <a class="secondary-btn" href="#services">Lihat Layanan</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="marquee-band overflow-hidden bg-white py-5 text-center text-xs font-bold uppercase tracking-[0.22em] text-[#555555]">
-        <div class="marquee-track whitespace-nowrap">
-          Dipercaya <span class="text-[#caa24a]">5.000+ Orang</span> &nbsp; | &nbsp; Terapis Profesional &nbsp; | &nbsp; <span class="text-[#caa24a]">Tersedia 24 Jam</span> &nbsp; | &nbsp; Spesialis Refleksi &nbsp; | &nbsp; Pelayanan Profesional &nbsp; | &nbsp; Spa Panggilan Jakarta &nbsp; | &nbsp; <span class="text-[#caa24a]">Booking Cepat</span> &nbsp; | &nbsp; Massage Home Service &nbsp; | &nbsp; Terapis Berpengalaman &nbsp; | &nbsp; <span class="text-[#caa24a]">Respon Cepat</span> &nbsp; | &nbsp; Perawatan Bersih & Rapi &nbsp; | &nbsp; Dipercaya <span class="text-[#caa24a]">5.000+ Orang</span> &nbsp; | &nbsp; Terapis Profesional &nbsp; | &nbsp; <span class="text-[#caa24a]">Tersedia 24 Jam</span> &nbsp; | &nbsp; Spesialis Refleksi &nbsp; | &nbsp; Pelayanan Profesional &nbsp; | &nbsp; Spa Panggilan Jakarta &nbsp; | &nbsp; <span class="text-[#caa24a]">Booking Cepat</span> &nbsp; | &nbsp; Massage Home Service &nbsp; | &nbsp; Terapis Berpengalaman &nbsp; | &nbsp; <span class="text-[#caa24a]">Respon Cepat</span> &nbsp; | &nbsp; Perawatan Bersih & Rapi
-        </div>
-      </section>
-
-      <section id="about" class="px-5 py-24 lg:px-10">
-        <div class="mx-auto grid max-w-7xl items-start gap-14 lg:grid-cols-[1.18fr_0.9fr]">
-          <div class="about-image -mx-1 overflow-hidden rounded-t-full rounded-br-[3rem] bg-[#e8e8e8] md:mx-0 md:rounded-br-[7rem] lg:mt-6" data-aos="fade-right">
-            <img class="mt-5 h-[390px] w-full object-cover object-top md:h-full md:min-h-[520px] lg:h-[560px] lg:min-h-0" src="./assets/ganbar/image fantasy massage-terapis massage.png" alt="Terapis profesional Fantasy Massage di Jakarta" />
+      <section id="about" class="bg-[#f7f2fb] py-20 md:py-24">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="grid grid-cols-2 gap-6 border-b border-[#e1d3eb] pb-16 text-center md:grid-cols-4" data-aos="fade-up">
+            <article class="about-stat"><strong data-count-up data-target="10" data-suffix="+">0+</strong><span>Tahun Pengalaman</span></article>
+            <article class="about-stat"><strong data-count-up data-target="5" data-suffix="K+">0K+</strong><span>Sesi Dilayani</span></article>
+            <article class="about-stat"><strong data-count-up data-target="98" data-suffix="%">0%</strong><span>Tingkat Kepuasan</span></article>
+            <article class="about-stat"><strong data-count-up data-target="24" data-suffix=" Jam">0</strong><span>Siap Melayani</span></article>
           </div>
-          <div class="reveal" data-aos="fade-left">
-            <p class="mb-3.5 text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#8f6b20]">Tentang Fantasy Massage</p>
-            <h2 class="[font-family:var(--font-serif)] text-[clamp(2.15rem,10vw,4.8rem)] leading-none">Layanan Spa <span class="block whitespace-nowrap text-[0.78em] text-[#caa24a] sm:text-[1em]">Panggilan Terpercaya</span></h2>
-            <p class="mt-7 text-base leading-8 text-[#666666]">
-              Fantasy Massage Adalah layanan <span class="font-semibold text-[#8f6b20]">spa panggilan Jakarta</span> untuk Anda yang ingin menikmati relaksasi tanpa perlu keluar rumah. Terapis profesional kami siap datang ke rumah, hotel, atau apartemen yang tersedia 24 jam dengan perlengkapan perawatan bersih dan respon cepat.
-            </p>
-            <div class="mt-9 space-y-6 border-l border-[#d8d8d8] pl-6">
-              <div>
-                <h3 class="[font-family:var(--font-serif)] text-2xl">Terapis <span class="text-[#caa24a]">Profesional</span></h3>
-                <p class="mt-2 text-sm leading-7 text-[#666666]">Ditangani oleh terapis berpengalaman yang memahami titik tegang tubuh, menjaga etika pelayanan, dan mengutamakan kenyamanan pelanggan selama sesi berlangsung.</p>
+          <div class="mt-16 grid items-center gap-10 lg:grid-cols-[1fr_1.12fr] lg:gap-16">
+            <div class="overflow-hidden shadow-2xl shadow-purple-950/10" data-aos="fade-right"><img class="aspect-[4/3.5] w-full object-cover" src="./assets/ganbar/about-us.webp" alt="Terapis profesional Ungu Spa" /></div>
+            <div data-aos="fade-left">
+              <p class="section-kicker">Tentang Kami</p>
+              <h2 class="section-title">Perawatan profesional untuk kenyamanan Anda</h2>
+              <p class="section-copy">Ungu Spa menyediakan layanan massage, spa, lulur, kerik, dan refleksi panggilan. Terapis kami hadir dengan pelayanan yang nyaman, sopan, dan profesional langsung ke rumah, hotel, atau apartemen Anda.</p>
+              <div class="mt-8 grid gap-7 sm:grid-cols-2">
+                <article class="about-text-item"><h3>Terapis <span>Profesional</span></h3><p>Berpengalaman memahami titik tegang tubuh dan selalu menjaga etika serta kenyamanan selama sesi.</p></article>
+                <article class="about-text-item"><h3>Respons <span>Cepat</span></h3><p>Admin membantu mengatur jadwal dan mengirim terapis dengan efisien sesuai kebutuhan Anda.</p></article>
               </div>
-              <div>
-                <h3 class="[font-family:var(--font-serif)] text-2xl">Respons & Perjalanan <span class="text-[#caa24a]">Cepat</span></h3>
-                <p class="mt-2 text-sm leading-7 text-[#666666]">Tim kami membantu mengatur jadwal dengan cepat, menyesuaikan lokasi pelanggan, dan memastikan terapis berangkat secara efisien agar Anda tidak menunggu terlalu lama.</p>
-              </div>
+              <a class="primary-btn mt-8" href="https://wa.me/6281947673316?text=Halo%20Ungu%20Spa%2C%20saya%20ingin%20konsultasi">Konsultasi WhatsApp</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="order-section relative overflow-hidden bg-[#111111] px-5 py-24 text-white lg:px-10">
-        <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-          <div class="reveal" data-aos="fade-right">
-            <p class="mb-3.5 text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#d8b654]">Cara Order Fantasy Massage</p>
-            <h2 class="[font-family:var(--font-serif)] text-[clamp(2.3rem,5vw,4.8rem)] leading-none">
-              Cara Order <span class="block text-[#d8b654]">Spa Panggilan.</span>
-            </h2>
-            <p class="mt-7 max-w-xl text-base leading-8 text-[#c9c9c9]">
-              Booking dibuat simpel supaya Anda bisa langsung menikmati layanan massage di rumah, hotel, atau apartemen tanpa proses yang rumit.
-            </p>
-          </div>
-          <div class="grid grid-cols-2 gap-x-5 gap-y-0 border-t border-white/10 md:gap-x-10">
-            <article class="reveal border-b border-white/10 py-6 md:grid md:grid-cols-[54px_1fr] md:gap-5 md:py-7" data-aos="fade-up" data-aos-delay="0">
-              <span class="[font-family:var(--font-serif)] text-2xl text-[#d8b654] md:text-3xl">01.</span>
-              <div>
-                <h3 class="[font-family:var(--font-serif)] text-lg leading-tight md:text-2xl">Pilih Layanan</h3>
-                <p class="mt-3 text-xs leading-6 text-[#c9c9c9] md:text-sm md:leading-7">Tentukan treatment yang Anda inginkan, mulai dari full body massage, lulur, kerik, refleksi, sampai masculine spa.</p>
-              </div>
-            </article>
-            <article class="reveal border-b border-white/10 py-6 md:grid md:grid-cols-[54px_1fr] md:gap-5 md:py-7" data-aos="fade-up" data-aos-delay="100">
-              <span class="[font-family:var(--font-serif)] text-2xl text-[#d8b654] md:text-3xl">02.</span>
-              <div>
-                <h3 class="[font-family:var(--font-serif)] text-lg leading-tight md:text-2xl">Chat WhatsApp</h3>
-                <p class="mt-3 text-xs leading-6 text-[#c9c9c9] md:text-sm md:leading-7">Hubungi admin melalui tombol WhatsApp, lalu kirim layanan pilihan, jumlah terapis, jadwal, dan alamat lengkap Anda.</p>
-              </div>
-            </article>
-            <article class="reveal border-b border-white/10 py-6 md:grid md:grid-cols-[54px_1fr] md:gap-5 md:py-7" data-aos="fade-up" data-aos-delay="200">
-              <span class="[font-family:var(--font-serif)] text-2xl text-[#d8b654] md:text-3xl">03.</span>
-              <div>
-                <h3 class="[font-family:var(--font-serif)] text-lg leading-tight md:text-2xl">Konfirmasi Jadwal</h3>
-                <p class="mt-3 text-xs leading-6 text-[#c9c9c9] md:text-sm md:leading-7">Admin akan membantu mengecek ketersediaan terapis, estimasi perjalanan, dan detail layanan sebelum sesi dimulai.</p>
-              </div>
-            </article>
-            <article class="reveal border-b border-white/10 py-6 md:grid md:grid-cols-[54px_1fr] md:gap-5 md:py-7" data-aos="fade-up" data-aos-delay="300">
-              <span class="[font-family:var(--font-serif)] text-2xl text-[#d8b654] md:text-3xl">04.</span>
-              <div>
-                <h3 class="[font-family:var(--font-serif)] text-lg leading-tight md:text-2xl">Terapis Datang</h3>
-                <p class="mt-3 text-xs leading-6 text-[#c9c9c9] md:text-sm md:leading-7">Terapis berangkat ke lokasi Anda dan membawa perlengkapan perawatan agar sesi spa terasa nyaman, rapi, dan profesional.</p>
-              </div>
-            </article>
+      <section id="services" class="bg-white py-24">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mx-auto max-w-3xl text-center" data-aos="fade-up"><p class="section-kicker justify-center">Paket Layanan</p><h2 class="section-title">Pilih perawatan yang tubuh Anda butuhkan</h2><p class="section-copy mx-auto">Nikmati pilihan treatment untuk meredakan lelah dan mengembalikan energi Anda.</p></div>
+          <div class="service-carousel mt-12" data-service-carousel data-aos="fade-up">
+            <div class="service-carousel__viewport"><div class="service-carousel__track" data-service-track>
+              <article class="service-card" data-service-card><img src="./assets/ganbar/image fantasy massage-body-massage.webp" alt="Full Body Massage" /><div><span>60–90 Menit</span><h3>Full Body Massage</h3><p>Pijatan menyeluruh untuk membantu meredakan pegal, ketegangan, dan rasa lelah.</p><a href="https://wa.me/6281947673316?text=Halo%20Ungu%20Spa%2C%20saya%20ingin%20ambil%20Full%20Body%20Massage">Pilih Paket →</a></div></article>
+              <article class="service-card" data-service-card><img src="./assets/ganbar/image fantasy massage-lulur.webp" alt="Lulur dan Full Body Massage" /><div><span>Perawatan Lengkap</span><h3>Lulur & Full Body Massage</h3><p>Kombinasi relaksasi dan lulur lembut agar tubuh serta kulit terasa lebih segar.</p><a href="https://wa.me/6281947673316?text=Halo%20Ungu%20Spa%2C%20saya%20ingin%20ambil%20Lulur%20dan%20Massage">Pilih Paket →</a></div></article>
+              <article class="service-card" data-service-card><img src="./assets/ganbar/image fantasy massage-kerokan.webp" alt="Massage dan Kerik" /><div><span>Hangat & Rileks</span><h3>Massage & Kerik</h3><p>Perawatan untuk membantu melepas pegal dan memberi sensasi hangat menenangkan.</p><a href="https://wa.me/6281947673316?text=Halo%20Ungu%20Spa%2C%20saya%20ingin%20ambil%20Massage%20dan%20Kerik">Pilih Paket →</a></div></article>
+              <article class="service-card" data-service-card><img src="./assets/ganbar/image fantasy massage 4-3.webp" alt="Masculine Spa" /><div><span>Premium Treatment</span><h3>Masculine Spa</h3><p>Perawatan relaksasi khusus untuk membantu tubuh pria kembali bugar dan nyaman.</p><a href="https://wa.me/6281947673316?text=Halo%20Ungu%20Spa%2C%20saya%20ingin%20ambil%20Masculine%20Spa">Pilih Paket →</a></div></article>
+            </div></div>
+            <div class="mt-8 flex justify-center gap-3"><button class="service-arrow" type="button" aria-label="Layanan sebelumnya" data-service-prev>←</button><button class="service-arrow" type="button" aria-label="Layanan berikutnya" data-service-next>→</button></div>
           </div>
         </div>
       </section>
 
-      <section id="benefit" class="bg-[#111111] px-5 py-24 text-white lg:px-10">
-        <div class="mx-auto max-w-6xl">
-          <div class="reveal max-w-4xl text-center md:mx-auto" data-aos="fade-up">
-            <h2 class="[font-family:var(--font-serif)] text-[clamp(2.2rem,4vw,4.6rem)] leading-tight">Manfaat <span class="text-[#d8b654]">Spa</span>&Massage</h2>
-          </div>
-          <div class="benefit-list mt-10 grid grid-cols-2 gap-x-5 gap-y-0 border-t border-white/10 md:mt-16 md:gap-x-10">
-            <article class="benefit-item border-b border-white/10 py-6 md:grid md:grid-cols-[64px_1fr] md:gap-6 md:py-[34px]" data-aos="fade-up" data-aos-delay="0">
-              <span class="[font-family:var(--font-serif)] text-2xl text-[#d8b654] md:text-[32px]">01.</span>
-              <div>
-                <h3 class="mt-2 [font-family:var(--font-serif)] text-lg leading-tight text-white md:mt-0 md:text-[clamp(1.45rem,2vw,2rem)]">Membantu Tubuh Lebih <span class="text-[#f0d27a]">Rileks</span> dan Segar</h3>
-                <p class="mt-3 max-w-[620px] text-xs leading-6 text-[#c9c9c9] md:text-base md:leading-[1.8]">Perawatan spa membantu tubuh melepas rasa lelah, membuat pikiran lebih tenang, dan mengembalikan energi setelah aktivitas padat.</p>
-              </div>
-            </article>
-            <article class="benefit-item border-b border-white/10 py-6 md:grid md:grid-cols-[64px_1fr] md:gap-6 md:py-[34px]" data-aos="fade-up" data-aos-delay="100">
-              <span class="[font-family:var(--font-serif)] text-2xl text-[#d8b654] md:text-[32px]">02.</span>
-              <div>
-                <h3 class="mt-2 [font-family:var(--font-serif)] text-lg leading-tight text-white md:mt-0 md:text-[clamp(1.45rem,2vw,2rem)]">Mengimbangi Efek Terlalu Lama <span class="text-[#f0d27a]">Duduk</span></h3>
-                <p class="mt-3 max-w-[620px] text-xs leading-6 text-[#c9c9c9] md:text-base md:leading-[1.8]">Massage membantu area punggung, pinggang, bahu, dan kaki terasa lebih lega setelah banyak duduk saat bekerja atau berkendara.</p>
-              </div>
-            </article>
-            <article class="benefit-item border-b border-white/10 py-6 md:grid md:grid-cols-[64px_1fr] md:gap-6 md:py-[34px]" data-aos="fade-up" data-aos-delay="200">
-              <span class="[font-family:var(--font-serif)] text-2xl text-[#d8b654] md:text-[32px]">03.</span>
-              <div>
-                <h3 class="mt-2 [font-family:var(--font-serif)] text-lg leading-tight text-white md:mt-0 md:text-[clamp(1.45rem,2vw,2rem)]">Perawatan <span class="text-[#f0d27a]">Efektif</span> untuk Mengurangi Stres</h3>
-                <p class="mt-3 max-w-[620px] text-xs leading-6 text-[#c9c9c9] md:text-base md:leading-[1.8]">Ritme massage yang stabil, ruangan yang tenang, dan aromaterapi membantu pikiran terasa lebih ringan dan relaks.</p>
-              </div>
-            </article>
-            <article class="benefit-item border-b border-white/10 py-6 md:grid md:grid-cols-[64px_1fr] md:gap-6 md:py-[34px]" data-aos="fade-up" data-aos-delay="300">
-              <span class="[font-family:var(--font-serif)] text-2xl text-[#d8b654] md:text-[32px]">04.</span>
-              <div>
-                <h3 class="mt-2 [font-family:var(--font-serif)] text-lg leading-tight text-white md:mt-0 md:text-[clamp(1.45rem,2vw,2rem)]">Mengurangi Nyeri dan <span class="text-[#f0d27a]">Ketegangan</span> Otot</h3>
-                <p class="mt-3 max-w-[620px] text-xs leading-6 text-[#c9c9c9] md:text-base md:leading-[1.8]">Tekanan massage yang tepat membantu meredakan rasa pegal, otot kaku, dan ketegangan pada area tubuh yang sering menumpuk beban.</p>
-              </div>
-            </article>
-            <article class="benefit-item col-span-2 mx-auto max-w-2xl border-b border-white/10 py-6 md:grid md:grid-cols-[64px_1fr] md:gap-6 md:py-[34px]" data-aos="fade-up" data-aos-delay="400">
-              <span class="[font-family:var(--font-serif)] text-2xl text-[#d8b654] md:text-[32px]">05.</span>
-              <div>
-                <h3 class="mt-2 [font-family:var(--font-serif)] text-lg leading-tight text-white md:mt-0 md:text-[clamp(1.45rem,2vw,2rem)]">Membantu Tubuh <span class="text-[#f0d27a]">Pulih</span> dan Meningkatkan Kualitas Tidur</h3>
-                <p class="mt-3 max-w-[620px] text-xs leading-6 text-[#c9c9c9] md:text-base md:leading-[1.8]">Setelah tubuh lebih rileks dan tidak terlalu tegang, istirahat terasa lebih nyaman sehingga tidur bisa menjadi lebih nyenyak.</p>
-              </div>
-            </article>
+      <section id="benefits" class="benefit-section bg-[#170026] py-24 text-white">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up"><p class="section-kicker">Mengapa Memilih Kami</p><h2 class="mt-4 text-4xl font-bold leading-tight md:text-6xl">Relaksasi berkualitas tanpa harus pergi jauh</h2></div>
+          <div class="mt-14 grid gap-px bg-white/12 md:grid-cols-2 lg:grid-cols-4" data-aos="fade-up">
+            <article class="benefit-card"><span>01</span><h3>Nyaman & Praktis</h3><p>Nikmati treatment di lokasi pilihan Anda tanpa antre dan perjalanan melelahkan.</p></article>
+            <article class="benefit-card"><span>02</span><h3>Terapis Terampil</h3><p>Pelayanan profesional dengan teknik yang disesuaikan kebutuhan tubuh Anda.</p></article>
+            <article class="benefit-card"><span>03</span><h3>Privasi Terjaga</h3><p>Kenyamanan dan privasi pelanggan selalu menjadi prioritas selama treatment.</p></article>
+            <article class="benefit-card"><span>04</span><h3>Siap 24 Jam</h3><p>Jadwal fleksibel untuk menemani kebutuhan relaksasi Anda kapan saja.</p></article>
           </div>
         </div>
       </section>
 
-      <section id="packages" class="px-5 py-24 lg:px-10">
-        <div class="mx-auto max-w-6xl text-center" data-aos="fade-up">
-          <p class="mb-3.5 text-[12px] font-extrabold uppercase tracking-[0.2em] text-[#8f6b20]">Paket spa&Massage</p>
-          <h2 class="[font-family:var(--font-serif)] text-[clamp(2.2rem,4vw,4.6rem)] leading-tight">Pilih sesi <span class="text-[#caa24a]">terbaik</span> <span class="italic">Ungulan Kami</span></h2>
-          <div class="package-grid mt-14 grid gap-5 sm:grid-cols-2">
-            <article class="package-card group overflow-hidden rounded-xl border border-[#e5e5e5] bg-white text-left shadow-[0_18px_55px_rgba(0,0,0,0.06)] transition hover:-translate-y-1 hover:shadow-[0_22px_70px_rgba(0,0,0,0.1)]" data-aos="zoom-in-up" data-aos-delay="0">
-              <img class="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105" src="./assets/ganbar/image fantasy massage-body-massage.png" alt="Paket Full Body Massage Fantasy Massage" />
-              <div class="p-6 md:p-8">
-                <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-[#8f6b20]">Body Treatment</p>
-                <h3 class="mt-2 [font-family:var(--font-serif)] text-3xl leading-[1.05] text-[#111111]">Full Body <span class="text-[#caa24a]">Massage</span></h3>
-                <p class="mt-4 text-sm leading-7 text-[#666666]">Memberikan rasa nyaman, membantu mengendurkan otot-otot tubuh yang tegang, dan membantu memiliki kualitas tidur yang lebih baik.</p>
-                <a href="https://wa.me/6281947673316?text=Halo%20Fantasy%20Massage%2C%20saya%20ingin%20ambil%20promo%20Full%20Body%20Massage" class="mt-6 inline-flex min-h-12 items-center gap-3 bg-gradient-to-r from-[#8f6b20] via-[#d8b654] to-[#f0d27a] px-5 text-left text-[#111111] shadow-[0_12px_28px_rgba(202,162,74,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(202,162,74,0.35)]">
-                  <svg class="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M20.5 13.6 13.6 20.5a2 2 0 0 1-2.83 0L3 12.73V3h9.73l7.77 7.77a2 2 0 0 1 0 2.83Z" stroke="currentColor" stroke-width="1.8" />
-                    <path d="M7.5 7.5h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
-                  </svg>
-                  <span class="text-sm font-extrabold uppercase tracking-[0.16em]">Pesan Sekarang</span>
-                </a>
-              </div>
-            </article>
-            <article class="package-card group overflow-hidden rounded-xl border border-[#e5e5e5] bg-white text-left shadow-[0_18px_55px_rgba(0,0,0,0.06)] transition hover:-translate-y-1 hover:shadow-[0_22px_70px_rgba(0,0,0,0.1)]" data-aos="zoom-in-up" data-aos-delay="100">
-              <img class="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105" src="./assets/ganbar/image fantasy massage-lulur.png" alt="Paket Lulur dan Full Body Massage Fantasy Massage" />
-              <div class="p-6 md:p-8">
-                <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-[#8f6b20]">Spa Treatment</p>
-                <h3 class="mt-2 [font-family:var(--font-serif)] text-3xl leading-[1.05] text-[#111111]">Lulur & <span class="text-[#caa24a]">Full Body</span> Massage</h3>
-                <p class="mt-4 text-sm leading-7 text-[#666666]">Spa lulur adalah jenis perawatan massage spa yang menggunakan lulur berkualitas baik untuk membantu tubuh terasa lebih bersih dan segar.</p>
-                <a href="https://wa.me/6281947673316?text=Halo%20Fantasy%20Massage%2C%20saya%20ingin%20ambil%20promo%20Lulur%20%26%20Full%20Body%20Massage" class="mt-6 inline-flex min-h-12 items-center gap-3 bg-gradient-to-r from-[#8f6b20] via-[#d8b654] to-[#f0d27a] px-5 text-left text-[#111111] shadow-[0_12px_28px_rgba(202,162,74,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(202,162,74,0.35)]">
-                  <svg class="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M20.5 13.6 13.6 20.5a2 2 0 0 1-2.83 0L3 12.73V3h9.73l7.77 7.77a2 2 0 0 1 0 2.83Z" stroke="currentColor" stroke-width="1.8" />
-                    <path d="M7.5 7.5h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
-                  </svg>
-                  <span class="text-sm font-extrabold uppercase tracking-[0.16em]">Pesan Sekarang</span>
-                </a>
-              </div>
-            </article>
-            <article class="package-card group overflow-hidden rounded-xl border border-[#e5e5e5] bg-white text-left shadow-[0_18px_55px_rgba(0,0,0,0.06)] transition hover:-translate-y-1 hover:shadow-[0_22px_70px_rgba(0,0,0,0.1)]" data-aos="zoom-in-up" data-aos-delay="200">
-              <img class="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105" src="./assets/ganbar/image fantasy massage-kerokan.png" alt="Paket Massage dan Kerik Fantasy Massage" />
-              <div class="p-6 md:p-8">
-                <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-[#8f6b20]">Recovery Treatment</p>
-                <h3 class="mt-2 [font-family:var(--font-serif)] text-3xl leading-[1.05] text-[#111111]">Massage & <span class="text-[#caa24a]">Kerik</span></h3>
-                <p class="mt-4 text-sm leading-7 text-[#666666]">Body massage dan kerik membantu membuat tubuh lebih rileks serta meredakan rasa tidak nyaman karena masuk angin.</p>
-                <a href="https://wa.me/6281947673316?text=Halo%20Fantasy%20Massage%2C%20saya%20ingin%20ambil%20promo%20Massage%20%26%20Kerik" class="mt-6 inline-flex min-h-12 items-center gap-3 bg-gradient-to-r from-[#8f6b20] via-[#d8b654] to-[#f0d27a] px-5 text-left text-[#111111] shadow-[0_12px_28px_rgba(202,162,74,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(202,162,74,0.35)]">
-                  <svg class="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M20.5 13.6 13.6 20.5a2 2 0 0 1-2.83 0L3 12.73V3h9.73l7.77 7.77a2 2 0 0 1 0 2.83Z" stroke="currentColor" stroke-width="1.8" />
-                    <path d="M7.5 7.5h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
-                  </svg>
-                  <span class="text-sm font-extrabold uppercase tracking-[0.16em]">Pesan Sekarang</span>
-                </a>
-              </div>
-            </article>
-            <article class="package-card group overflow-hidden rounded-xl border border-[#e5e5e5] bg-white text-left shadow-[0_18px_55px_rgba(0,0,0,0.06)] transition hover:-translate-y-1 hover:shadow-[0_22px_70px_rgba(0,0,0,0.1)]" data-aos="zoom-in-up" data-aos-delay="300">
-              <img class="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105" src="./assets/ganbar/image fantasy massage 4-3.png" alt="Paket Masculine Spa Fantasy Massage untuk pelanggan pria di Jakarta" />
-              <div class="p-6 md:p-8">
-                <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-[#8f6b20]">Men's Treatment</p>
-                <h3 class="mt-2 [font-family:var(--font-serif)] text-3xl leading-[1.05] text-[#111111]">Masculine <span class="text-[#caa24a]">Spa</span></h3>
-                <p class="mt-4 text-sm leading-7 text-[#666666]">Layanan body massage dan totok wajah membantu tubuh lebih rileks serta membuat wajah terasa lebih segar dan cerah.</p>
-                <a href="https://wa.me/6281947673316?text=Halo%20Fantasy%20Massage%2C%20saya%20ingin%20ambil%20promo%20Masculine%20Spa" class="mt-6 inline-flex min-h-12 items-center gap-3 bg-gradient-to-r from-[#8f6b20] via-[#d8b654] to-[#f0d27a] px-5 text-left text-[#111111] shadow-[0_12px_28px_rgba(202,162,74,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(202,162,74,0.35)]">
-                  <svg class="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M20.5 13.6 13.6 20.5a2 2 0 0 1-2.83 0L3 12.73 V3h9.73l7.77 7.77a2 2 0 0 1 0 2.83Z" stroke="currentColor" stroke-width="1.8" />
-                    <path d="M7.5 7.5h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
-                  </svg>
-                  <span class="text-sm font-extrabold uppercase tracking-[0.16em]">Pesan Sekarang</span>
-                </a>
-              </div>
-            </article>
+      <section id="order" class="bg-[#f7f2fb] py-24">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mx-auto max-w-3xl text-center" data-aos="fade-up"><p class="section-kicker justify-center">Cara Order</p><h2 class="section-title">Pesan layanan dengan empat langkah mudah</h2></div>
+          <div class="relative mt-14 grid gap-6 md:grid-cols-4">
+            <div class="absolute left-0 right-0 top-11 hidden h-px bg-[#d8c7e8] md:block"></div>
+            <article class="step-card" data-aos="zoom-in"><span>01</span><h3>Pilih Treatment</h3><p>Tentukan layanan yang paling sesuai dengan kebutuhan tubuh Anda.</p></article>
+            <article class="step-card" data-aos="zoom-in" data-aos-delay="100"><span>02</span><h3>Hubungi Admin</h3><p>Kirim pesan WhatsApp untuk cek jadwal dan detail treatment.</p></article>
+            <article class="step-card" data-aos="zoom-in" data-aos-delay="200"><span>03</span><h3>Konfirmasi Jadwal</h3><p>Informasikan waktu, alamat, dan paket yang Anda inginkan.</p></article>
+            <article class="step-card" data-aos="zoom-in" data-aos-delay="300"><span>04</span><h3>Nikmati Relaksasi</h3><p>Terapis datang dan Anda tinggal menikmati treatment dengan nyaman.</p></article>
           </div>
         </div>
       </section>
 
-      <section id="testimoni" class="bg-[#eeeeee] px-5 py-24 lg:px-10">
-        <div class="mx-auto max-w-6xl text-center">
-          <p class="mb-3.5 text-[12px] font-extrabold uppercase tracking-[0.2em] text-[#8f6b20]">Cerita Klien</p>
-          <h2 class="[font-family:var(--font-serif)] text-[clamp(2.1rem,4vw,4.2rem)]">Testimoni Pelanggan <span class="text-[#8f6b20]">kami.</span></span></h2>
-          <div class="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-6">
-            <article class="testimonial-card rounded-lg bg-white p-4 text-left shadow-[0_16px_40px_rgba(51,41,31,0.06)] md:min-h-[310px] md:p-8" data-aos="fade-up" data-aos-delay="0">
-              <div class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-[#8f6b20] to-[#f0d27a] text-sm font-extrabold text-[#111111] md:h-[42px] md:w-[42px] md:text-base">S</div>
-              <h3 class="mt-3 text-sm font-extrabold md:mt-[18px] md:text-base">Sarah R.</h3>
-              <p class="mt-2 text-xs tracking-[0.08em] text-[#caa24a] md:mt-3.5 md:text-base">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-              <blockquote class="mt-3 text-xs leading-6 text-[#555555] md:mt-[18px] md:text-base md:leading-[1.85]">"Lebih ringan, wangi, bersih, dan therapist-nya paham titik tegang."</blockquote>
-            </article>
-            <article class="testimonial-card rounded-lg bg-white p-4 text-left shadow-[0_16px_40px_rgba(51,41,31,0.06)] md:min-h-[310px] md:p-8" data-aos="fade-up" data-aos-delay="100">
-              <div class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-[#8f6b20] to-[#f0d27a] text-sm font-extrabold text-[#111111] md:h-[42px] md:w-[42px] md:text-base">K</div>
-              <h3 class="mt-3 text-sm font-extrabold md:mt-[18px] md:text-base">Yanto</h3>
-              <p class="mt-2 text-xs tracking-[0.08em] text-[#caa24a] md:mt-3.5 md:text-base">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-              <blockquote class="mt-3 text-xs leading-6 text-[#555555] md:mt-[18px] md:text-base md:leading-[1.85]">"Aromaterapinya lembut tapi efeknya terasa setelah kerja."</blockquote>
-            </article>
-            <article class="testimonial-card rounded-lg bg-white p-4 text-left shadow-[0_16px_40px_rgba(51,41,31,0.06)] md:min-h-[310px] md:p-8">
-              <div class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-[#8f6b20] to-[#f0d27a] text-sm font-extrabold text-[#111111] md:h-[42px] md:w-[42px] md:text-base">A</div>
-              <h3 class="mt-3 text-sm font-extrabold md:mt-[18px] md:text-base">Alicia P.</h3>
-              <p class="mt-2 text-xs tracking-[0.08em] text-[#caa24a] md:mt-3.5 md:text-base">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-              <blockquote class="mt-3 text-xs leading-6 text-[#555555] md:mt-[18px] md:text-base md:leading-[1.85]">"Reservasi cepat, staf ramah, dan suasananya premium."</blockquote>
-            </article>
-            <article class="testimonial-card rounded-lg bg-white p-4 text-left shadow-[0_16px_40px_rgba(51,41,31,0.06)] md:min-h-[310px] md:p-8" data-aos="fade-up" data-aos-delay="0">
-              <div class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-[#8f6b20] to-[#f0d27a] text-sm font-extrabold text-[#111111] md:h-[42px] md:w-[42px] md:text-base">D</div>
-              <h3 class="mt-3 text-sm font-extrabold md:mt-[18px] md:text-base">Dimas A.</h3>
-              <p class="mt-2 text-xs tracking-[0.08em] text-[#caa24a] md:mt-3.5 md:text-base">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-              <blockquote class="mt-3 text-xs leading-6 text-[#555555] md:mt-[18px] md:text-base md:leading-[1.85]">"Terapis datang tepat waktu, perlengkapan rapi, dan hasilnya nyaman."</blockquote>
-            </article>
-            <article class="testimonial-card rounded-lg bg-white p-4 text-left shadow-[0_16px_40px_rgba(51,41,31,0.06)] md:min-h-[310px] md:p-8" data-aos="fade-up" data-aos-delay="100">
-              <div class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-[#8f6b20] to-[#f0d27a] text-sm font-extrabold text-[#111111] md:h-[42px] md:w-[42px] md:text-base">M</div>
-              <h3 class="mt-3 text-sm font-extrabold md:mt-[18px] md:text-base">Maya L.</h3>
-              <p class="mt-2 text-xs tracking-[0.08em] text-[#caa24a] md:mt-3.5 md:text-base">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-              <blockquote class="mt-3 text-xs leading-6 text-[#555555] md:mt-[18px] md:text-base md:leading-[1.85]">"Booking mudah, admin responsif, dan treatment-nya bikin rileks."</blockquote>
-            </article>
-            <article class="testimonial-card rounded-lg bg-white p-4 text-left shadow-[0_16px_40px_rgba(51,41,31,0.06)] md:min-h-[310px] md:p-8" data-aos="fade-up" data-aos-delay="200">
-              <div class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-[#8f6b20] to-[#f0d27a] text-sm font-extrabold text-[#111111] md:h-[42px] md:w-[42px] md:text-base">R</div>
-              <h3 class="mt-3 text-sm font-extrabold md:mt-[18px] md:text-base">Reno F.</h3>
-              <p class="mt-2 text-xs tracking-[0.08em] text-[#caa24a] md:mt-3.5 md:text-base">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-              <blockquote class="mt-3 text-xs leading-6 text-[#555555] md:mt-[18px] md:text-base md:leading-[1.85]">"Setelah full body massage, badan terasa enteng dan tidur nyenyak."</blockquote>
-            </article>
-            <article class="testimonial-card rounded-lg bg-white p-4 text-left shadow-[0_16px_40px_rgba(51,41,31,0.06)] md:min-h-[310px] md:p-8" data-aos="fade-up" data-aos-delay="300">
-              <div class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-[#8f6b20] to-[#f0d27a] text-sm font-extrabold text-[#111111] md:h-[42px] md:w-[42px] md:text-base">N</div>
-              <h3 class="mt-3 text-sm font-extrabold md:mt-[18px] md:text-base">Nadia W.</h3>
-              <p class="mt-2 text-xs tracking-[0.08em] text-[#caa24a] md:mt-3.5 md:text-base">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-              <blockquote class="mt-3 text-xs leading-6 text-[#555555] md:mt-[18px] md:text-base md:leading-[1.85]">"Lulur dan massage-nya bersih, lembut, dan terasa premium."</blockquote>
-            </article>
-            <article class="testimonial-card rounded-lg bg-white p-4 text-left shadow-[0_16px_40px_rgba(51,41,31,0.06)] md:min-h-[310px] md:p-8" data-aos="fade-up" data-aos-delay="0">
-              <div class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-[#8f6b20] to-[#f0d27a] text-sm font-extrabold text-[#111111] md:h-[42px] md:w-[42px] md:text-base">F</div>
-              <h3 class="mt-3 text-sm font-extrabold md:mt-[18px] md:text-base">Fajar H.</h3>
-              <p class="mt-2 text-xs tracking-[0.08em] text-[#caa24a] md:mt-3.5 md:text-base">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-              <blockquote class="mt-3 text-xs leading-6 text-[#555555] md:mt-[18px] md:text-base md:leading-[1.85]">"Layanan malam tetap cepat, terapis sopan, dan hasilnya rileks."</blockquote>
-            </article>
-            <article class="testimonial-card col-span-2 mx-auto w-[calc(50%-0.375rem)] rounded-lg bg-white p-4 text-left shadow-[0_16px_40px_rgba(51,41,31,0.06)] md:col-span-1 md:w-auto md:min-h-[310px] md:p-8" data-aos="fade-up" data-aos-delay="100">
-              <div class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-[#8f6b20] to-[#f0d27a] text-sm font-extrabold text-[#111111] md:h-[42px] md:w-[42px] md:text-base">I</div>
-              <h3 class="mt-3 text-sm font-extrabold md:mt-[18px] md:text-base">Intan C.</h3>
-              <p class="mt-2 text-xs tracking-[0.08em] text-[#caa24a] md:mt-3.5 md:text-base">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-              <blockquote class="mt-3 text-xs leading-6 text-[#555555] md:mt-[18px] md:text-base md:leading-[1.85]">"Treatment-nya nyaman, tidak buru-buru, dan badan terasa segar."</blockquote>
-            </article>
-          </div>
+      <section id="testimoni" class="bg-white py-24">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mx-auto max-w-3xl text-center" data-aos="fade-up"><p class="section-kicker justify-center">Testimoni</p><h2 class="section-title">Cerita pelanggan setelah menikmati layanan kami</h2></div>
+          <div class="testimonial-carousel mt-12" data-testimonial-carousel data-aos="fade-up"><div class="testimonial-carousel__viewport"><div class="testimonial-carousel__track" data-testimonial-track>
+            <article class="testimonial-card" data-testimonial-card><h3>Sinta Maharani</h3><div class="testimonial-stars" aria-label="Rating 5 dari 5">★★★★★</div><p>Terapis datang tepat waktu, komunikasinya sopan, dan badan saya terasa jauh lebih ringan.</p></article>
+            <article class="testimonial-card" data-testimonial-card><h3>Raka Pratama</h3><div class="testimonial-stars" aria-label="Rating 5 dari 5">★★★★★</div><p>Booking via WhatsApp cepat dan jelas. Pijatannya pas untuk melepas pegal setelah kerja.</p></article>
+            <article class="testimonial-card" data-testimonial-card><h3>Nadia Putri</h3><div class="testimonial-stars" aria-label="Rating 5 dari 5">★★★★★</div><p>Saya suka paket lulurnya. Kulit terasa bersih, aromanya nyaman, dan terapis sangat ramah.</p></article>
+            <article class="testimonial-card" data-testimonial-card><h3>Dimas Arya</h3><div class="testimonial-stars" aria-label="Rating 5 dari 5">★★★★★</div><p>Pelayanannya profesional dari awal sampai selesai. Sangat praktis tanpa keluar rumah.</p></article>
+            <article class="testimonial-card" data-testimonial-card><h3>Melati Anjani</h3><div class="testimonial-stars" aria-label="Rating 5 dari 5">★★★★★</div><p>Admin responsif, jadwal fleksibel, dan treatment terasa nyaman serta memuaskan.</p></article>
+          </div></div><div class="mt-8 flex justify-center gap-3" data-testimonial-pagination></div></div>
         </div>
+      </section>
+
+      <section class="cta-section bg-[#3b0066] py-20 text-white">
+        <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-5 md:flex-row md:items-center lg:px-8" data-aos="fade-up"><div><p class="text-sm font-bold uppercase tracking-[.2em] text-[#d8b4fe]">Waktunya Memanjakan Diri</p><h2 class="mt-3 max-w-3xl text-4xl font-bold md:text-5xl">Tubuh lebih rileks dimulai dari satu pesan.</h2></div><a class="light-btn shrink-0" href="https://wa.me/6281947673316?text=Halo%20Ungu%20Spa%2C%20saya%20ingin%20booking">Booking Sekarang</a></div>
       </section>
     </main>
 
-    <footer class="bg-[#111111] px-5 py-16 text-[#dddddd] lg:px-10">
-      <div class="mx-auto grid max-w-6xl grid-cols-2 gap-x-7 gap-y-10 md:grid-cols-4">
-        <div class="col-span-2 md:col-span-1">
-          <div class="flex items-center gap-3">
-            <img class="h-14 w-14 rounded-full object-cover" src="./assets/ganbar/logo2.png" alt="Logo Fantasy Massage" />
-            <h2 class="[font-family:var(--font-serif)] text-3xl text-[#d8b654]">FANTASY</h2>
-          </div>
-          <p class="mt-4 text-sm leading-7 text-[#bbbbbb]">Spa dan refleksi premium untuk tubuh yang lebih ringan, tenang, dan terawat.</p>
-        </div>
-        <div>
-          <h3 class="mb-[18px] font-extrabold text-white">Layanan</h3>
-          <a href="#packages" class="mt-3 block text-[#bbbbbb] transition hover:text-white">Full Body Massage</a>
-          <a href="#packages" class="mt-3 block text-[#bbbbbb] transition hover:text-white">Lulur & Full Body Massage</a>
-          <a href="#packages" class="mt-3 block text-[#bbbbbb] transition hover:text-white">Massage & Kerik</a>
-          <a href="#packages" class="mt-3 block text-[#bbbbbb] transition hover:text-white">Masculine Spa</a>
-        </div>
-        <div>
-          <h3 class="mb-[18px] font-extrabold text-white">Tautan</h3>
-          <a href="#about" class="mt-3 block text-[#bbbbbb] transition hover:text-white">Tentang Kami</a>
-          <a href="#benefit" class="mt-3 block text-[#bbbbbb] transition hover:text-white">Manfaat</a>
-          <a href="#testimoni" class="mt-3 block text-[#bbbbbb] transition hover:text-white">Testimoni</a>
-        </div>
-        <div class="col-span-2 md:col-span-1">
-          <h3 class="mb-[18px] font-extrabold text-white">Kontak</h3>
-          <a class="inline-flex text-[#d8b654] transition hover:text-[#f0d27a]" href="https://wa.me/6281947673316">0819-4767-3316</a>
-        </div>
+    <footer class="bg-[#170026] px-5 py-14 text-white">
+      <div class="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.2fr_.8fr_.8fr] lg:px-8">
+        <div><a class="footer-brand" href="#home"><span class="footer-logo"><img src="./assets/ganbar/logo-ungu-spa-transparent.png" alt="Logo Ungu Spa" /></span><span><strong>Ungu</strong><small>Spa</small></span></a><p class="mt-5 max-w-md leading-7 text-white/65">Layanan massage dan perawatan tubuh profesional untuk menghadirkan relaksasi langsung di tempat Anda.</p></div>
+        <div><h3 class="footer-title">Tautan</h3><div class="footer-links"><a href="#about">Tentang Kami</a><a href="#services">Layanan</a><a href="#benefits">Manfaat</a><a href="#order">Cara Order</a></div></div>
+        <div><h3 class="footer-title">Kontak</h3><div class="footer-links"><p>Siap melayani 24 jam</p><a href="https://wa.me/6281947673316">WhatsApp: 0819-4767-3316</a></div></div>
       </div>
-      <div class="mx-auto mt-12 max-w-6xl border-t border-white/10 pt-6 text-xs text-[#999999]">&copy; 2026 Fantasy Massage. Seluruh hak cipta dilindungi.</div>
+      <div class="mx-auto mt-12 max-w-7xl border-t border-white/10 pt-6 text-sm text-white/45 lg:px-8"><p>Copyright 2026 Ungu Spa. Seluruh Hak Dilindungi.</p></div>
     </footer>
 
-    <a class="wa-float fixed bottom-[22px] right-[22px] z-50 grid h-[62px] w-[62px] place-items-center rounded-full bg-gradient-to-br from-[#8f6b20] via-[#d8b654] to-[#f0d27a] shadow-[0_18px_45px_rgba(202,162,74,0.32)] transition hover:-translate-y-1 hover:scale-105 hover:shadow-[0_24px_58px_rgba(202,162,74,0.42)]" href="https://wa.me/6281947673316" aria-label="Chat WhatsApp">
-      <span class="wa-signal wa-signal-one" aria-hidden="true"></span>
-      <span class="wa-signal wa-signal-two" aria-hidden="true"></span>
-      <span class="wa-signal wa-signal-three" aria-hidden="true"></span>
-      <svg class="relative z-10 h-[34px] w-[34px] fill-[#111111]" viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M16.02 3.2A12.68 12.68 0 0 0 5.08 22.3L3.2 29l6.86-1.8A12.68 12.68 0 1 0 16.02 3.2Zm0 23.14c-2.03 0-3.92-.59-5.53-1.6l-.4-.24-4.07 1.07 1.09-3.97-.26-.41a10.43 10.43 0 1 1 9.17 5.15Zm5.72-7.8c-.31-.16-1.86-.92-2.15-1.02-.29-.11-.5-.16-.71.16-.21.31-.82 1.02-1.01 1.23-.19.21-.37.24-.69.08-.31-.16-1.33-.49-2.54-1.57-.94-.84-1.57-1.87-1.75-2.19-.18-.31-.02-.48.14-.64.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.11-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.62-.52-.53-.71-.54h-.61c-.21 0-.55.08-.84.39-.29.31-1.1 1.08-1.1 2.62s1.13 3.04 1.29 3.25c.16.21 2.23 3.4 5.4 4.76.75.32 1.34.52 1.8.67.76.24 1.45.21 1.99.13.61-.09 1.86-.76 2.12-1.49.26-.73.26-1.36.18-1.49-.08-.13-.29-.21-.6-.37Z" />
-      </svg>
-    </a>
-
+    <div id="wa-picker" class="wa-picker hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="wa-picker-title">
+      <div class="wa-picker-panel">
+        <div class="wa-picker-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.8a8.4 8.4 0 0 1-12.4 7.4L4 20.4l1.3-4a8.3 8.3 0 1 1 15.2-4.6Zm-8.4-6.6a6.6 6.6 0 0 0-5.6 10.1l.3.5-.8 2.3 2.4-.8.5.3a6.6 6.6 0 1 0 3.2-12.4Z"/></svg><div><h2 id="wa-picker-title">Start a Conversation</h2><p>Choose admin to chat on<br /><strong>WhatsApp</strong></p></div><button class="wa-picker-close" type="button" aria-label="Tutup pilihan admin">×</button></div>
+        <p class="wa-picker-note">The team typically replies in a few minutes.</p>
+        <div class="wa-admin-list">
+          <a class="wa-admin-card" href="https://wa.me/6285717640071" data-wa-direct data-wa-number="6285717640071" target="_blank" rel="noopener"><span class="wa-avatar">👩🏻‍💼</span><span><strong>Admin 1</strong><small>Online</small></span><b>◔</b></a>
+          <a class="wa-admin-card" href="https://wa.me/6281947673316" data-wa-direct data-wa-number="6281947673316" target="_blank" rel="noopener"><span class="wa-avatar">👩🏻‍💼</span><span><strong>Admin 2</strong><small>Online</small></span><b>◔</b></a>
+        </div>
+      </div>
+    </div>
+    <a class="wa-float" href="https://wa.me/6281947673316" aria-label="Chat WhatsApp"><span class="wa-ring wa-ring-one"></span><span class="wa-ring wa-ring-two"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.8a8.4 8.4 0 0 1-12.4 7.4L4 20.4l1.3-4a8.3 8.3 0 1 1 15.2-4.6Zm-8.4-6.6a6.6 6.6 0 0 0-5.6 10.1l.3.5-.8 2.3 2.4-.8.5.3a6.6 6.6 0 1 0 3.2-12.4Z"/></svg></a>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
